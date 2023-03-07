@@ -42,9 +42,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'To-Do List',
-            template : __dirname + '/dist/index.html',
+            template : path.join(__dirname, "src/template.html"),
             filename : 'index.html',
-            inject : 'body'
+            inject : false
         }),
     ],
 };
