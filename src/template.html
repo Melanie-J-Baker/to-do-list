@@ -15,7 +15,7 @@
                 </div>
                 <div class="projects-main">
                     <div class="project">Example Project</div>
-                    <div class="new-project">
+                    <div class="new-project hidden">
                         <label for="project-name">Project name</label>
                         <input type="text" id="project-name" name="project-name" required />
                         <button class="create-project" type="button">Create project</button>
@@ -38,7 +38,7 @@
                         <input class="del del-task" type="image" alt="Delete task" src="" width="20" height="20"/>
                     </div>
                 </div>
-                <div class="new-task">
+                <div class="new-task hidden">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required />
                     <label for="desc">Description</label>
@@ -47,9 +47,9 @@
                     <input type="date" id="date" name="date" />
                     <label for="priority">Priority</label>
                     <select name="priority" id="priority">
-                        <option value="high">High</option>
+                        <option value="high" selected>High</option>
                         <option value="medium">Medium</option>
-                        <option value="low" selected>Low</option>
+                        <option value="low" >Low</option>
                     </select>
                     <button class="create-task" type="button">Create task</button>
                     <button class="cancel cancel-task" type="button">Cancel</button>
