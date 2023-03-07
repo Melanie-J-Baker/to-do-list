@@ -22,7 +22,7 @@
         </div>
         <div class="projects-main">
           <div class="project">Example Project</div>
-          <div class="new-project hidden">
+          <div class="new-project">
             <label for="project-name">Project name</label>
             <input type="text" id="project-name" name="project-name" required />
             <button class="create-project" type="button">Create project</button>
@@ -80,24 +80,66 @@
               height="20"
             />
           </div>
-        </div>
-        <div class="new-task hidden">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-          <label for="desc">Description</label>
-          <textarea id="desc" name="desc" rows="3" cols="30"></textarea>
-          <label for="date">Due Date</label>
-          <input type="date" id="date" name="date" />
-          <label for="priority">Priority</label>
-          <select name="priority" id="priority">
-            <option value="high" selected>High</option>
-            <option value="medium">Medium</option>
-            <option value="low">Low</option>
-          </select>
-          <button class="create-task" type="button">Create task</button>
-          <button class="cancel cancel-task" type="button">Cancel</button>
+          <div class="task">
+            <input type="checkbox" class="checkbox" />
+            <!--use onclick event listener to add strikethrough to text-->
+            <p class="task-text">Example task</p>
+            <input
+              class="edit edit-task"
+              type="image"
+              alt="Edit task"
+              src="<%=require('./assets/edit.svg')%>"
+              width="20"
+              height="20"
+            />
+            <input
+              class="del del-task"
+              type="image"
+              alt="Delete task"
+              src="<%=require('./assets/delete.svg')%>"
+              width="20"
+              height="20"
+            />
+          </div>
+          <div class="task">
+            <input type="checkbox" class="checkbox" />
+            <!--use onclick event listener to add strikethrough to text-->
+            <p class="task-text">Example task</p>
+            <input
+              class="edit edit-task"
+              type="image"
+              alt="Edit task"
+              src="<%=require('./assets/edit.svg')%>"
+              width="20"
+              height="20"
+            />
+            <input
+              class="del del-task"
+              type="image"
+              alt="Delete task"
+              src="<%=require('./assets/delete.svg')%>"
+              width="20"
+              height="20"
+            />
+          </div>
         </div>
       </div>
+    </div>
+    <div class="new-task">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+      <label for="desc">Description</label>
+      <textarea id="desc" name="desc" rows="3" cols="30"></textarea>
+      <label for="date">Due Date</label>
+      <input type="date" id="date" name="date" />
+      <label for="priority">Priority</label>
+      <select name="priority" id="priority">
+        <option value="high" selected>High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <button class="create-task" type="button">Create task</button>
+      <button class="cancel cancel-task" type="button">Cancel</button>
     </div>
   </body>
 </html>

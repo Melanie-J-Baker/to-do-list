@@ -1,26 +1,71 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px red solid;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  height: 90vh;
+  position: relative;
+}
+
+.projects-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.projects-heading {
+  flex: 1;
 }
 
 .new-project {
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-head {
+  display: flex;
+  flex-direction: row;
+}
+
+.main-heading {
+  flex: 1;
+}
+
+.tasks {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input[type="checkbox"],
+.edit-task,
+.delete-task {
+  margin: 5px;
+}
+
+.task-text {
+  flex: 1;
 }
 
 .new-task {
-    position: fixed;
-    margin-left: auto;
-    margin-right: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(assets/add-task.jpg);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
