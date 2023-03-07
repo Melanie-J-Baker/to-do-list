@@ -22,12 +22,6 @@
         </div>
         <div class="projects-main">
           <div class="project">Example Project</div>
-          <div class="new-project">
-            <label for="project-name">Project name</label>
-            <input type="text" id="project-name" name="project-name" required />
-            <button class="create-project" type="button">Create project</button>
-            <button class="cancel cancel-project" type="button">Cancel</button>
-          </div>
         </div>
       </div>
       <div class="main">
@@ -125,21 +119,41 @@
         </div>
       </div>
     </div>
-    <div class="new-task">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
-      <label for="desc">Description</label>
-      <textarea id="desc" name="desc" rows="3" cols="30"></textarea>
-      <label for="date">Due Date</label>
-      <input type="date" id="date" name="date" />
-      <label for="priority">Priority</label>
-      <select name="priority" id="priority">
-        <option value="high" selected>High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
-      </select>
-      <button class="create-task" type="button">Create task</button>
-      <button class="cancel cancel-task" type="button">Cancel</button>
+    <!--new project modal-->
+    <div class="new-project">
+      <label for="project-name">Project name</label>
+      <input type="text" id="project-name" name="project-name" required />
+      <div class="project-btns-div">
+        <button class="create-project" type="button">Create project</button>
+        <button class="cancel cancel-project" type="button">Cancel</button>
+      </div>
+    </div>
+    <!--new task modal-->
+    <div class="new-task hidden">
+      <div class="name-div form-div">
+        <label class="form-label" for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="desc-div form-div">
+        <label class="form-label" for="desc">Description</label>
+        <textarea id="desc" name="desc" rows="4" cols="25"></textarea>
+      </div>
+      <div class="desc-div form-div">
+        <label class="form-label" for="date">Due Date</label>
+        <input type="date" id="date" name="date" />
+      </div>
+      <div class="priority-div form-div">
+        <label class="form-label" for="priority">Priority</label>
+        <select name="priority" id="priority">
+          <option value="high" selected>High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+      </div>
+      <div class="form-btns-div form-div">
+        <button class="create-task" type="button">Create task</button>
+        <button class="cancel cancel-task" type="button">Cancel</button>
+      </div>
     </div>
   </body>
 </html>
