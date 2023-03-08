@@ -5,6 +5,12 @@
     <title>To-Do List</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <script defer="defer" src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barriecito&family=Ubuntu+Condensed&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="content">
@@ -120,16 +126,18 @@
       </div>
     </div>
     <!--new project modal-->
-    <div class="new-project">
-      <label for="project-name">Project name</label>
-      <input type="text" id="project-name" name="project-name" required />
+    <div class="new-project hidden">
+      <div class="project-input-div">
+        <label for="project-name">Project name</label>
+        <input type="text" id="project-name" name="project-name" required />
+      </div>
       <div class="project-btns-div">
         <button class="create-project" type="button">Create project</button>
         <button class="cancel cancel-project" type="button">Cancel</button>
       </div>
     </div>
     <!--new task modal-->
-    <div class="new-task hidden">
+    <div class="new-task">
       <div class="name-div form-div">
         <label class="form-label" for="name">Name</label>
         <input type="text" id="name" name="name" required />
