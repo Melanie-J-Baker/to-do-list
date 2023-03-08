@@ -8,7 +8,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid darkblue;
   font-family: "Ubuntu Condensed", sans-serif;
 }
 
@@ -29,6 +28,7 @@
   flex-direction: row;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   height: 7vh;
+  border-bottom: 2px solid white;
 }
 
 .projects-heading {
@@ -46,13 +46,18 @@
 }
 
 .projects-main {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+}
+
+.project {
+  padding: 5px;
 }
 
 .main {
   background-color: var(--coral);
   display: flex;
   flex-direction: column;
+  border-left: 3px solid white;
 }
 
 .main-head {
@@ -60,6 +65,7 @@
   flex-direction: row;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   align-items: center;
+  border-bottom: 2px solid white;
 }
 
 .main-heading {
@@ -79,7 +85,7 @@
 
 .tasks {
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(35Spx, 1fr));
 }
 
 .task {
@@ -87,6 +93,9 @@
   flex-direction: row;
   align-items: center;
   font-size: 1.2rem;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 35px;
 }
 
 input[type="checkbox"],
@@ -97,6 +106,7 @@ input[type="checkbox"],
 
 .task-text {
   flex: 1;
+  padding-left: 10px;
 }
 
 .new-project {
@@ -118,6 +128,11 @@ input[type="checkbox"],
   display: flex;
   flex-direction: row;
   font-size: 1.2rem;
+  justify-content: space-around;
+}
+
+input#project-name {
+  height: 40px;
 }
 
 .project-btns-div {
@@ -125,6 +140,7 @@ input[type="checkbox"],
   flex-direction: row;
   padding: 5px;
   justify-content: center;
+  padding-top: 15px;
 }
 
 .new-task {
@@ -161,6 +177,18 @@ select#priority {
   padding: 5px;
 }
 
+.create-project,
+.create-task {
+  background-color: var(--coral);
+  font-weight: bold;
+}
+
+.cancel-project,
+.cancel-task {
+  background-color: rgb(245, 55, 22);
+  font-weight: bold;
+}
+
 .create-task,
 .cancel-task,
 .create-project,
@@ -168,17 +196,19 @@ select#priority {
   padding: 3px 6px 3px 6px;
   margin-left: 6px;
   margin-right: 6px;
-  border-radius: 5px;
+  border-radius: 9px;
   font-size: 1rem;
 }
 
 .create-task,
 .cancel-task {
   margin: 3px;
+  padding: 8px 5px 8px 5px;
 }
 
 .form-btns.div {
   padding: 5px;
+  justify-self: center;
 }
 
 .hidden {
