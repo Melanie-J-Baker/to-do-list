@@ -1,8 +1,8 @@
 import "./style.css";
+
 let projects = [];
 const newToDo = (name, desc, date, priority) => {
-  const sayHello = () => console.log("hello");
-  return { name, desc, date, priority, sayHello };
+  return { name, desc, date, priority };
 };
 
 let toDo = newToDo("washing", "ironing", "12/04/23", "High");
