@@ -45,7 +45,7 @@
 
 .add-project {
   align-self: center;
-  margin: 2px;
+  margin-right: 6px;
   width: 25px;
   height: 25px;
 }
@@ -62,7 +62,7 @@
   background-color: var(--coral);
   display: flex;
   flex-direction: column;
-  border-left: 3px solid white;
+  border-left: 3px solid var(--shadow);
 }
 
 .main-head {
@@ -94,6 +94,10 @@
   color: white;
 }
 
+.add-task {
+  margin-right: 8px;
+}
+
 .tasks {
   display: grid;
   grid-template-rows: repeat(auto-fill, minmax(35Spx, 1fr));
@@ -117,6 +121,13 @@ input[type="checkbox"],
   margin: 5px;
   height: 20px;
   width: 20px;
+}
+
+.task-icons-div {
+  background-color: rgb(252, 173, 144);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
 }
 
 .priority-image {
