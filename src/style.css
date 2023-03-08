@@ -1,5 +1,5 @@
 :root {
-  --coral: rgb(250, 123, 77);
+  --coral: rgb(248, 129, 86);
   --dark-teal: rgb(0, 37, 25);
   --light-teal: rgb(4, 197, 101);
   --shadow: rgb(41, 40, 40);
@@ -27,7 +27,7 @@
 .projects-head {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
   height: 7vh;
   box-shadow: 0px 3px 5px var(--shadow);
 }
@@ -68,7 +68,7 @@
 .main-head {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
   align-items: center;
   box-shadow: 0px 3px 5px var(--shadow);
   min-height: 7vh;
@@ -91,6 +91,7 @@
   margin: 2px;
   width: 20px;
   height: 20px;
+  color: white;
 }
 
 .tasks {
@@ -116,6 +117,10 @@ input[type="checkbox"],
   margin: 5px;
   height: 20px;
   width: 20px;
+}
+
+.priority-image {
+  stroke: darkred;
 }
 
 .task-text {
