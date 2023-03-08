@@ -17,13 +17,10 @@
       <div class="projects">
         <div class="projects-head">
           <p class="heading projects-heading">Projects</p>
-          <input
+          <img
             class="add add-project"
-            type="image"
             alt="Add project"
             src="<%=require('./assets/add.svg')%>"
-            width="20"
-            height="20"
           />
         </div>
         <div class="projects-main">
@@ -33,29 +30,20 @@
       <div class="main">
         <div class="main-head">
           <p class="heading main-heading">Example Project</p>
-          <input
+          <img
             class="edit edit-project"
-            type="image"
             alt="Edit project"
             src="<%=require('./assets/edit.svg')%>"
-            width="20"
-            height="20"
           />
-          <input
+          <img
             class="del del-project"
-            type="image"
             alt="Delete project"
             src="<%=require('./assets/delete.svg')%>"
-            width="20"
-            height="20"
           />
-          <input
+          <img
             class="add add-task"
-            type="image"
             alt="Add task"
             src="<%=require('./assets/add.svg')%>"
-            width="20"
-            height="20"
           />
         </div>
         <div class="tasks">
@@ -63,70 +51,47 @@
             <input type="checkbox" class="checkbox" />
             <!--use onclick event listener to add strikethrough to text-->
             <p class="task-text">Example task</p>
-            <input
+            <img
+              alt="priority"
+              class="priority-image"
+              src="<%=require('./assets/low.svg')%>"
+            />
+            <img
               class="edit edit-task"
-              type="image"
               alt="Edit task"
               src="<%=require('./assets/edit.svg')%>"
-              width="20"
-              height="20"
             />
-            <input
+            <img
               class="del del-task"
-              type="image"
               alt="Delete task"
               src="<%=require('./assets/delete.svg')%>"
-              width="20"
-              height="20"
             />
           </div>
           <div class="task">
             <input type="checkbox" class="checkbox" />
             <!--use onclick event listener to add strikethrough to text-->
             <p class="task-text">Example task</p>
-            <input
+            <img
+              alt="priority"
+              class="priority-image"
+              src="<%=require('./assets/low.svg')%>"
+            />
+            <img
               class="edit edit-task"
-              type="image"
               alt="Edit task"
               src="<%=require('./assets/edit.svg')%>"
-              width="20"
-              height="20"
             />
-            <input
+            <img
               class="del del-task"
-              type="image"
               alt="Delete task"
               src="<%=require('./assets/delete.svg')%>"
-              width="20"
-              height="20"
-            />
-          </div>
-          <div class="task">
-            <input type="checkbox" class="checkbox" />
-            <!--use onclick event listener to add strikethrough to text-->
-            <p class="task-text">Example task</p>
-            <input
-              class="edit edit-task"
-              type="image"
-              alt="Edit task"
-              src="<%=require('./assets/edit.svg')%>"
-              width="20"
-              height="20"
-            />
-            <input
-              class="del del-task"
-              type="image"
-              alt="Delete task"
-              src="<%=require('./assets/delete.svg')%>"
-              width="20"
-              height="20"
             />
           </div>
         </div>
       </div>
     </div>
     <!--new project modal-->
-    <div class="new-project hidden">
+    <div class="new-project">
       <div class="project-input-div">
         <label for="project-name">Project name</label>
         <input type="text" id="project-name" name="project-name" required />
@@ -137,7 +102,7 @@
       </div>
     </div>
     <!--new task modal-->
-    <div class="new-task">
+    <div class="new-task hidden">
       <div class="name-div form-div">
         <label class="form-label" for="name">Name</label>
         <input type="text" id="name" name="name" required />
