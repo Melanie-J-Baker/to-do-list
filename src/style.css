@@ -28,7 +28,7 @@
   display: flex;
   flex-direction: row;
   background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
-  height: 7vh;
+  min-height: 7vh;
   box-shadow: 0px 3px 5px var(--shadow);
 }
 
@@ -114,6 +114,10 @@
   min-height: 35px;
 }
 
+.due-date {
+  display: none;
+}
+
 input[type="checkbox"],
 .edit-task,
 .del-task,
@@ -144,7 +148,7 @@ input[type="checkbox"],
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
+  width: 90%;
   padding: 20px;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   color: white;
@@ -192,6 +196,7 @@ input#project-name {
   color: white;
   font-size: 1.2rem;
   border: 2px solid white;
+  box-shadow: 3px 3px 5px 2px var(--shadow);
 }
 
 .form-div {
@@ -251,4 +256,62 @@ select#priority {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (min-width: 550px) {
+  .new-project,
+  .new-task {
+    width: 500px;
+  }
+
+  .due-date {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1rem;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 980px) {
+  .projects-main {
+    padding-left: 10px;
+  }
+
+  input[type="checkbox"],
+  .add-project,
+  .edit-project,
+  .del-project,
+  .add-task,
+  .edit-task,
+  .del-task,
+  .priority-image {
+    height: 25px;
+    width: 25px;
+  }
+
+  .projects-heading,
+  .main-heading {
+    font-size: 3rem;
+    padding: 10px;
+  }
+
+  .project {
+    font-size: 2rem;
+  }
+
+  .task-text {
+    font-size: 1.5rem;
+  }
+
+  .due-date {
+    font-size: 1.5rem;
+  }
+
+  .project-input-div {
+    font-size: 1.5rem;
+  }
+
+  .new-task {
+    font-size: 1.5rem;
+  }
 }
