@@ -1,6 +1,7 @@
 import "./style.css";
 
 let projectLibrary = [];
+
 const newToDo = (name, desc, date, priority) => {
   return { name, desc, date, priority, completed: false };
 };
