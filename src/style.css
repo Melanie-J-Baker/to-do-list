@@ -37,10 +37,10 @@
   padding: 5px;
   text-align: center;
   color: white;
-  font-family: "Barriecito", "Gill Sans", sans-serif;
+  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;
   font-size: 2rem;
   align-self: center;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 1px var(--dark-teal);
 }
 
 .add-project {
@@ -79,10 +79,10 @@
   flex: 1;
   text-align: center;
   color: white;
-  font-family: "Barriecito", "Gill Sans", sans-serif;
+  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;
   font-size: 2rem;
   padding: 5px;
-  text-shadow: 2px 2px 3px black;
+  text-shadow: 2px 2px 1px var(--dark-teal);
 }
 
 .edit-project,
