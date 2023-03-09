@@ -36,7 +36,7 @@ const newProjectModal = (() => {
 })();
 
 const newProjectNameModal = (() => {
-  const _projectName = document.querySelector(".projects-heading");
+  const _projectName = document.querySelector(".main-heading");
   const _changeNameModal = document.querySelector(".change-project");
   const _newNameInput = document.querySelector("#new-project-name");
   const editProjectIcon = document.querySelector(".edit-project");
@@ -44,13 +44,13 @@ const newProjectNameModal = (() => {
   const cancelNewName = document.querySelector(".change-cancel-project");
 
   function show() {
-    _projectName.style.display = "none";
+    _projectName.textContent = "";
     _changeNameModal.style.display = "grid";
   }
 
   function hide() {
     _changeNameModal.style.display = "none";
-    _projectName.style.display = "block";
+    _projectName.textContent = currentProject().name;
   }
 
   function submit() {

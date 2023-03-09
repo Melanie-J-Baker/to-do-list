@@ -29,10 +29,10 @@ function createTaskBtnListeners() {
   let checkbox = document.querySelectorAll(".checkbox");
   checkbox.forEach((box) =>
     box.addEventListener("click", function (e) {
-      if (e.target.classList.contains("checked")) {
-        incompleted(e.target.parentNode.dataset.value);
-      } else {
+      if (e.target.checked == true) {
         completed(e.target.parentNode.dataset.value);
+      } else {
+        incompleted(e.target.parentNode.dataset.value);
       }
       storeProjects();
       renderToDos();
@@ -84,7 +84,8 @@ function createTaskBtnListeners() {
   if (updateBtn) {
     updateBtn.addEventListener("click", function (e) {
       editTask.submit(
-        e.target.parentNode.parentNode.previousSibling.dataset.value
+        e.target.parentNode.parentNode.previousSibling.previousSibling.dataset
+          .value
       );
     });
   }

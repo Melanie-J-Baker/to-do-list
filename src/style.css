@@ -215,6 +215,25 @@ input#new-project-name {
   box-shadow: 3px 3px 5px 2px var(--shadow);
 }
 
+.edit-task {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  width: 90%;
+  height: 70%;
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  box-shadow: 3px 3px 5px 2px var(--shadow);
+}
+
 .form-div {
   display: flex;
   flex-direction: row;
