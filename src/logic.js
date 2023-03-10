@@ -32,7 +32,7 @@ function currentProject() {
 
 function changeCurrentProject(index) {
   _removeCurrent();
-  projectLibrary[index].active = true;
+  projectLibrary[index].current = true;
   renderProjects();
   renderHead();
   renderToDos();

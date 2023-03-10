@@ -100,7 +100,7 @@
 
 .tasks {
   display: grid;
-  grid-template-rows: repeat(auto-fill, minmax(35Spx, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));
 }
 
 .task {
@@ -215,7 +215,7 @@ input#new-project-name {
   box-shadow: 3px 3px 5px 2px var(--shadow);
 }
 
-.edit-task {
+.edit-task-modal {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -242,8 +242,16 @@ input#new-project-name {
 
 input#name,
 input#date,
-select#priority {
+select#priority,
+input#new-name,
+input#new-date,
+select#new-priority {
   height: 1.8rem;
+  font-size: 1.2rem;
+}
+
+textarea#desc,
+textarea#new-desc {
   font-size: 1.2rem;
 }
 
@@ -253,7 +261,9 @@ select#priority {
 }
 
 .create-project,
-.change-project-btn .create-task,
+.change-project-btn,
+.create-task,
+.update-task,
 .ok {
   background-color: var(--coral);
   font-weight: bold;
@@ -261,6 +271,7 @@ select#priority {
 
 .cancel-project,
 .cancel-task,
+.cancel-update-task,
 .change-cancel-project {
   background-color: rgb(245, 55, 22);
   font-weight: bold;

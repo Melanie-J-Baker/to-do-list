@@ -73,12 +73,13 @@ const newProjectNameModal = (() => {
 
 const editTask = (() => {
   function show(index) {
-    const _editModal = document.querySelector(".edit-task");
+    const _editModal = document.querySelector(".edit-task-modal");
     const _editName = document.querySelector("#new-name");
     const _editDesc = document.querySelector("#new-desc");
     const _editDate = document.querySelector("#new-date");
     const _editPriority = document.querySelector("#new-priority");
 
+    _editModal.dataset.value = index;
     _editModal.style.display = "flex";
     _editName.value = currentProject().toDos[index].name;
     _editDesc.value = currentProject().toDos[index].desc;
@@ -87,7 +88,7 @@ const editTask = (() => {
   }
 
   function hide() {
-    const _editModal = document.querySelector(".edit-task");
+    const _editModal = document.querySelector(".edit-task-modal");
     _editModal.style.display = "none";
   }
 
@@ -97,7 +98,7 @@ const editTask = (() => {
     const _editDate = document.querySelector("#new-date");
     const _editPriority = document.querySelector("#new-priority");
 
-    if (_editName.value == "") {
+    if (_editName.value == "" || _editDate.value == "") {
       errorMessage.show();
     } else {
       currentProject().toDos[index].name = _editName.value;
@@ -106,9 +107,16 @@ const editTask = (() => {
       currentProject().toDos[index].priority = _editPriority.value;
       renderToDos();
       storeProjects();
+      hide();
     }
   }
+
+  const editTaskBtn = document.querySelector(".update-task");
+  const cancelEditTaskBtn = document.querySelector(".cancel-update-task");
+
   return {
+    editTaskBtn,
+    cancelEditTaskBtn,
     show,
     hide,
     submit,
@@ -144,7 +152,7 @@ const newTask = (() => {
   }
 
   function submit() {
-    if (_newTaskNameInput.value == "") {
+    if (_newTaskNameInput.value == "" || _newDateInput.value == "") {
       errorMessage.show();
     } else {
       newToDo(

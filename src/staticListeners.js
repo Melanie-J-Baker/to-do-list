@@ -2,6 +2,7 @@ import {
   newProjectNameModal,
   newProjectModal,
   newTask,
+  editTask,
   errorMessage,
 } from "./DOM";
 
@@ -31,5 +32,8 @@ newProjectNameModal.cancelNewName.addEventListener(
 newTask.addTaskBtn.addEventListener("click", newTask.show);
 newTask.cancelTaskBtn.addEventListener("click", newTask.hide);
 newTask.createTaskBtn.addEventListener("click", newTask.submit);
+
+editTask.editTaskBtn.addEventListener("click", editTask.submit);
+editTask.cancelEditTaskBtn.addEventListener("click", editTask.hide);
 
 errorMessage.okBtn.addEventListener("click", errorMessage.hide);

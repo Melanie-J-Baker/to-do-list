@@ -6,6 +6,12 @@ import {
 } from "./dynamicListeners";
 import moment from "moment";
 
+import highIcon from "./assets/high.svg";
+import medIcon from "./assets/medium.svg";
+import lowIcon from "./assets/low.svg";
+import editIcon from "./assets/edit.svg";
+import delIcon from "./assets/delete.svg";
+
 const projectDiv = document.querySelector(".projects-main");
 const projectMainHead = document.querySelector(".main-heading");
 const tasksDiv = document.querySelector(".tasks");
@@ -32,7 +38,9 @@ function _removeProjects() {
 
 function renderHead() {
   projectMainHead.textContent = currentProject().name;
-  projectMainHead.dataset.value = currentProject();
+  projectMainHead.dataset.value = projectLibrary.findIndex(
+    (project) => project.current
+  );
 }
 
 function renderToDos() {
@@ -53,38 +61,45 @@ function renderToDos() {
     const toDoName = document.createElement("p");
     toDoName.classList.add("task-text");
     toDoName.textContent = task.name;
+    if (task.complete) {
+      toDoName.setAttribute("text-decoration", "line-through");
+    }
     toDo.appendChild(toDoName);
 
     if (task.date) {
       const toDoDate = document.createElement("p");
       toDoDate.classList.add("due-date");
-      toDoDate.textContent = moment(task.date, "DD/MM/YYYY").fromNow();
+      toDoDate.textContent = moment(task.date, "YYYY-MM-DD").fromNow();
       toDo.appendChild(toDoDate);
     }
+
+    const taskIconsDiv = document.createElement("div");
+    taskIconsDiv.classList.add("task-icons-div");
+    toDo.appendChild(taskIconsDiv);
 
     const toDoPriority = document.createElement("img");
     toDoPriority.classList.add("priority-image");
     toDoPriority.alt = "Priority level";
     if (task.priority == "high") {
-      toDoPriority.src = "<%=require('../assets/high.svg')%>";
+      toDoPriority.src = highIcon;
     } else if (task.priority == "medium") {
-      toDoPriority.src = "<%=require('../assets/medium.svg')%>";
+      toDoPriority.src = medIcon;
     } else {
-      toDoPriority.src = "<%=require('../assets/low.svg')%>";
+      toDoPriority.src = lowIcon;
     }
-    toDo.appendChild(toDoPriority);
+    taskIconsDiv.appendChild(toDoPriority);
 
     const toDoEdit = document.createElement("img");
     toDoEdit.classList.add("edit-task");
     toDoEdit.alt = "Edit task";
-    toDoEdit.src = "<%=require('../assets/edit.svg')%>";
-    toDo.appendChild(toDoEdit);
+    toDoEdit.src = editIcon;
+    taskIconsDiv.appendChild(toDoEdit);
 
     const toDoDelete = document.createElement("img");
     toDoDelete.classList.add("del-task");
     toDoDelete.alt = "Delete task";
-    toDoDelete.src = "<%=require('../assets/delete.svg')%>";
-    toDo.appendChild(toDoDelete);
+    toDoDelete.src = delIcon;
+    taskIconsDiv.appendChild(toDoDelete);
 
     tasksDiv.appendChild(toDo);
   });

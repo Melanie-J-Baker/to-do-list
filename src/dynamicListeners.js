@@ -20,7 +20,7 @@ function createProjBtnListeners() {
 
   let delIcon = document.querySelector(".del-project");
   delIcon.addEventListener("click", function (e) {
-    removeProject(e.target.parentNode.dataset.value);
+    removeProject(e.target.previousSibling.previousSibling.dataset.value);
     storeProjects();
   });
 }
@@ -83,10 +83,7 @@ function createTaskBtnListeners() {
   let updateBtn = document.querySelector(".update-task");
   if (updateBtn) {
     updateBtn.addEventListener("click", function (e) {
-      editTask.submit(
-        e.target.parentNode.parentNode.previousSibling.previousSibling.dataset
-          .value
-      );
+      editTask.submit(e.target.parentNode.parentNode.dataset.value);
     });
   }
 }
