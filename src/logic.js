@@ -29,7 +29,6 @@ function currentProject() {
   let currentProjects = projectLibrary.filter(
     (project) => project.current == true
   );
-  console.log(currentProjects[0]);
   return currentProjects[0];
 }
 
@@ -50,11 +49,11 @@ function _removeCurrent() {
 function removeProject(index) {
   if (projectLibrary.length > 1) {
     if (index != 0) {
-      projectLibrary[index - 1].current = true;
       projectLibrary.splice(index, 1);
+      projectLibrary[index - 1].current = true;
     } else {
+      projectLibrary.splice(index, 1);
       projectLibrary[1].current = true;
-      projectLibrary.splice(0, 1);
     }
   }
   renderProjects();

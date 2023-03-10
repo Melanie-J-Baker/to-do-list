@@ -1,3 +1,4 @@
+import { projectLibrary } from ".";
 import { editTask } from "./DOM";
 import {
   changeCurrentProject,
@@ -20,9 +21,9 @@ function createProjBtnListeners() {
 
   let delIcon = document.querySelector(".del-project");
   delIcon.addEventListener("click", function (e) {
-    alert(e.target.dataset.value);
-    removeProject(e.target.dataset.value);
+    removeProject(projectLibrary.findIndex((project) => project.current));
     storeProjects();
+    e.stopPropagation();
   });
 }
 
@@ -30,10 +31,10 @@ function createTaskBtnListeners() {
   let checkbox = document.querySelectorAll(".checkbox");
   checkbox.forEach((box) =>
     box.addEventListener("click", function (e) {
-      if (e.target.checked == true) {
-        completed(e.target.parentNode.dataset.value);
-      } else {
+      if (e.target.classList.contains("checked")) {
         incompleted(e.target.parentNode.dataset.value);
+      } else {
+        completed(e.target.parentNode.dataset.value);
       }
       storeProjects();
       renderToDos();

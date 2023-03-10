@@ -38,7 +38,6 @@ function _removeProjects() {
 }
 
 function renderHead() {
-  console.log(currentProject());
   projectMainHead.textContent = currentProject().name;
   projectMainHead.dataset.value = projectLibrary.findIndex(
     (project) => project.current
@@ -60,14 +59,15 @@ function renderToDos() {
     checkbox.classList.add("checkbox");
     if (task.complete) {
       checkbox.checked = true;
+      checkbox.classList.add("checked");
     }
     toDo.appendChild(checkbox);
 
     const toDoName = document.createElement("p");
     toDoName.classList.add("task-text");
     toDoName.textContent = task.name;
-    if (task.complete) {
-      toDoName.setAttribute("text-decoration", "line-through");
+    if (checkbox.classList.contains("checked")) {
+      toDoName.textDecoration = "line-through";
     }
     toDo.appendChild(toDoName);
 

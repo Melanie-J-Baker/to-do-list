@@ -9,6 +9,7 @@ const newProjectModal = (() => {
   const _projNameInput = document.querySelector("#project-name");
 
   function show() {
+    _projNameInput.value = "";
     _addProjectModal.style.display = "grid";
   }
 
@@ -72,13 +73,13 @@ const newProjectNameModal = (() => {
 })();
 
 const editTask = (() => {
-  function show(index) {
-    const _editModal = document.querySelector(".edit-task-modal");
-    const _editName = document.querySelector("#new-name");
-    const _editDesc = document.querySelector("#new-desc");
-    const _editDate = document.querySelector("#new-date");
-    const _editPriority = document.querySelector("#new-priority");
+  const _editModal = document.querySelector(".edit-task-modal");
+  const _editName = document.querySelector("#new-name");
+  const _editDesc = document.querySelector("#new-desc");
+  const _editDate = document.querySelector("#new-date");
+  const _editPriority = document.querySelector("#new-priority");
 
+  function show(index) {
     _editModal.dataset.value = index;
     _editModal.style.display = "flex";
     _editName.value = currentProject().toDos[index].name;
@@ -93,11 +94,6 @@ const editTask = (() => {
   }
 
   function submit(index) {
-    const _editName = document.querySelector("#new-name");
-    const _editDesc = document.querySelector("#new-desc");
-    const _editDate = document.querySelector("#new-date");
-    const _editPriority = document.querySelector("#new-priority");
-
     if (_editName.value == "" || _editDate.value == "") {
       errorMessage.show();
     } else {
