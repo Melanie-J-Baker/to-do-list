@@ -20,7 +20,8 @@ function createProjBtnListeners() {
 
   let delIcon = document.querySelector(".del-project");
   delIcon.addEventListener("click", function (e) {
-    removeProject(e.target.previousSibling.previousSibling.dataset.value);
+    alert(e.target.dataset.value);
+    removeProject(e.target.dataset.value);
     storeProjects();
   });
 }

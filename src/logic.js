@@ -26,7 +26,10 @@ const newToDo = (name, desc, date, priority) => {
 };
 
 function currentProject() {
-  let currentProjects = projectLibrary.filter((project) => project.current);
+  let currentProjects = projectLibrary.filter(
+    (project) => project.current == true
+  );
+  console.log(currentProjects[0]);
   return currentProjects[0];
 }
 
@@ -40,27 +43,23 @@ function changeCurrentProject(index) {
   newTask.hide();
 }
 
+function _removeCurrent() {
+  projectLibrary.forEach((project) => (project.current = false));
+}
+
 function removeProject(index) {
   if (projectLibrary.length > 1) {
-    if (projectLibrary[index] == currentProject()) {
-      if (index != 0) {
-        projectLibrary[index - 1].current = true;
-        projectLibrary.splice(0, 1);
-      } else {
-        projectLibrary[1].current = true;
-        projectLibrary.splice(0, 1);
-      }
-    } else {
+    if (index != 0) {
+      projectLibrary[index - 1].current = true;
       projectLibrary.splice(index, 1);
+    } else {
+      projectLibrary[1].current = true;
+      projectLibrary.splice(0, 1);
     }
   }
   renderProjects();
   renderHead();
   renderToDos();
-}
-
-function _removeCurrent() {
-  projectLibrary.forEach((project) => (project.current = false));
 }
 
 function completed(index) {

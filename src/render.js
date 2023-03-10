@@ -15,6 +15,7 @@ import delIcon from "./assets/delete.svg";
 const projectDiv = document.querySelector(".projects-main");
 const projectMainHead = document.querySelector(".main-heading");
 const tasksDiv = document.querySelector(".tasks");
+const delProject = document.querySelector(".del-project");
 
 function renderProjects() {
   _removeProjects();
@@ -37,8 +38,12 @@ function _removeProjects() {
 }
 
 function renderHead() {
+  console.log(currentProject());
   projectMainHead.textContent = currentProject().name;
   projectMainHead.dataset.value = projectLibrary.findIndex(
+    (project) => project.current
+  );
+  delProject.dataset.value = projectLibrary.findIndex(
     (project) => project.current
   );
 }
