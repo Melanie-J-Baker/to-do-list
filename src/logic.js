@@ -50,15 +50,12 @@ function removeProject(index) {
   if (projectLibrary.length > 1) {
     if (index != 0) {
       projectLibrary.splice(index, 1);
-      projectLibrary[index - 1].current = true;
+      //projectLibrary[0].current = true;
     } else {
-      projectLibrary.splice(index, 1);
-      projectLibrary[1].current = true;
+      projectLibrary.splice(0, 1);
+      //projectLibrary[index + 2].current = true;
     }
   }
-  renderProjects();
-  renderHead();
-  renderToDos();
 }
 
 function completed(index) {

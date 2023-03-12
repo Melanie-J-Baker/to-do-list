@@ -4,7 +4,7 @@ import {
   createProjBtnListeners,
   createTaskBtnListeners,
 } from "./dynamicListeners";
-import moment from "moment";
+import { format } from "date-fns";
 
 import highIcon from "./assets/high.svg";
 import medIcon from "./assets/medium.svg";
@@ -57,24 +57,21 @@ function renderToDos() {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("checkbox");
-    if (task.complete) {
+    /*if (task.complete) {
       checkbox.checked = true;
       checkbox.classList.add("checked");
-    }
+    }*/
     toDo.appendChild(checkbox);
 
     const toDoName = document.createElement("p");
     toDoName.classList.add("task-text");
     toDoName.textContent = task.name;
-    if (checkbox.classList.contains("checked")) {
-      toDoName.textDecoration = "line-through";
-    }
     toDo.appendChild(toDoName);
 
     if (task.date) {
       const toDoDate = document.createElement("p");
       toDoDate.classList.add("due-date");
-      toDoDate.textContent = moment(task.date, "YYYY-MM-DD").fromNow();
+      toDoDate.textContent = format(new Date(task.date), "dd/MM/yy");
       toDo.appendChild(toDoDate);
     }
 

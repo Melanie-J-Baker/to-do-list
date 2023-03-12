@@ -1,7 +1,7 @@
 :root {
   --coral: rgb(248, 129, 86);
   --dark-teal: rgb(0, 37, 25);
-  --light-teal: rgb(4, 197, 101);
+  --light-teal: rgb(1, 128, 64);
   --shadow: rgb(41, 40, 40);
 }
 
@@ -128,7 +128,11 @@ input[type="checkbox"],
 }
 
 input[type="checkbox"]:checked {
-  accent-color: red;
+  accent-color: var(--dark-teal);
+}
+
+input[type="checkbox"]:checked + p.task-text {
+  text-decoration: line-through;
 }
 
 .task-icons-div {

@@ -52,7 +52,7 @@
         <div class="new-task">
           <div class="name-div form-div">
             <label class="form-label" for="name">Name</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="name" name="name" required autofocus />
           </div>
           <div class="desc-div form-div">
             <label class="form-label" for="desc">Description</label>
@@ -79,7 +79,7 @@
         <div class="edit-task-modal">
           <div class="name-div form-div">
             <label class="form-label" for="new-name">Name</label>
-            <input type="text" id="new-name" name="name" required />
+            <input type="text" id="new-name" name="name" required autofocus />
           </div>
           <div class="desc-div form-div">
             <label class="form-label" for="new-desc">Description</label>
@@ -108,7 +108,13 @@
     <div class="new-project">
       <div class="project-input-div">
         <label for="project-name">Project name</label>
-        <input type="text" id="project-name" name="project-name" required />
+        <input
+          type="text"
+          id="project-name"
+          name="project-name"
+          required
+          autofocus
+        />
       </div>
       <div class="project-btns-div">
         <button class="create-project" type="button">Create project</button>
@@ -125,6 +131,7 @@
           id="new-project-name"
           name="new-project-name"
           required
+          autofocus
         />
       </div>
       <div class="change-project-btns-div">
