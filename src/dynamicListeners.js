@@ -3,8 +3,6 @@ import { editTask } from "./DOM";
 import {
   changeCurrentProject,
   removeProject,
-  //completed,
-  //incompleted,
   deleteTask,
   storeProjects,
 } from "./logic";
@@ -24,7 +22,6 @@ function createProjBtnListeners() {
   let tasksDiv = document.querySelector(".tasks");
   delIcon.addEventListener("click", function (e) {
     e.stopPropagation();
-    console.log(e.target.dataset.value);
     removeProject(e.target.dataset.value);
     storeProjects();
     mainHead.textContent = "";
@@ -34,17 +31,6 @@ function createProjBtnListeners() {
 }
 
 function createTaskBtnListeners() {
-  /*let checkbox = document.querySelectorAll(".checkbox");
-  checkbox.forEach(box => {
-    if (box.checked) {
-      completed(box.parentNode.dataset.value);
-    } else {
-      incompleted(box.parentNode.dataset.value);
-    }
-    storeProjects();
-    renderToDos();
-  });*/
-
   let toDoName = document.querySelectorAll(".task-text");
   toDoName.forEach((btn) =>
     btn.addEventListener("click", function (e) {

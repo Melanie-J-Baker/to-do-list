@@ -57,10 +57,6 @@ function renderToDos() {
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.classList.add("checkbox");
-    /*if (task.complete) {
-      checkbox.checked = true;
-      checkbox.classList.add("checked");
-    }*/
     toDo.appendChild(checkbox);
 
     const toDoName = document.createElement("p");

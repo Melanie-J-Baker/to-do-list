@@ -58,14 +58,6 @@ function removeProject(index) {
   }
 }
 
-function completed(index) {
-  currentProject().toDos[index].completed = true;
-}
-
-function incompleted(index) {
-  currentProject().toDos[index].completed = false;
-}
-
 function deleteTask(index) {
   currentProject().toDos.splice(index, 1);
   renderToDos();
@@ -81,8 +73,6 @@ export {
   currentProject,
   changeCurrentProject,
   removeProject,
-  completed,
-  incompleted,
   deleteTask,
   storeProjects,
 };
