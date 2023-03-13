@@ -1,7 +1,9 @@
 :root {
-  --coral: rgb(248, 129, 86);
+  --coral: rgb(255, 138, 96);
+  --light-coral: rgb(247, 164, 133);
   --dark-teal: rgb(0, 37, 25);
   --light-teal: rgb(1, 128, 64);
+  --light-green: rgb(93, 228, 160);
   --shadow: rgb(41, 40, 40);
 }
 
@@ -54,6 +56,7 @@
   width: 30px;
   height: 30px;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .projects-main {
@@ -62,6 +65,11 @@
 
 .project {
   padding: 10px 5px 10px 5px;
+}
+
+.project:hover {
+  cursor: pointer;
+  background-color: var(--light-teal);
 }
 
 .main {
@@ -106,6 +114,7 @@
   width: 25px;
   height: 25px;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .add-task {
@@ -126,6 +135,11 @@
   margin-right: 10px;
   margin-top: 10px;
   min-height: 35px;
+}
+
+.task:hover {
+  cursor: pointer;
+  background-color: var(--light-coral);
 }
 
 .due-date {
@@ -157,6 +171,12 @@ input[type="checkbox"]:checked + p.task-text {
   text-decoration: line-through;
 }
 
+input[type="checkbox"]:hover {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+
 .task-icons-div {
   background-color: rgb(252, 173, 144);
   padding-left: 5px;
@@ -177,6 +197,7 @@ input[type="checkbox"]:checked + p.task-text {
   margin-top: 10px;
   min-height: 35px;
   display: none;
+  transition: 1s ease;
 }
 
 .new-project,
@@ -201,7 +222,7 @@ input[type="checkbox"]:checked + p.task-text {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
+  width: 50%;
   padding: 20px;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   color: white;
@@ -210,6 +231,7 @@ input[type="checkbox"]:checked + p.task-text {
   border-radius: 10px;
   border: 2px solid white;
   box-shadow: 3px 3px 5px 2px var(--shadow);
+  justify-content: center;
 }
 
 .project-input-div,
@@ -308,6 +330,20 @@ textarea#new-desc {
 .ok {
   background-color: var(--coral);
   font-weight: bold;
+}
+
+.create-project:hover,
+.change-project-btn:hover,
+.create-task:hover,
+.update-task:hover,
+.ok:hover,
+.cancel-project:hover,
+.cancel-task:hover,
+.cancel-update-task:hover,
+.change-cancel-project:hover {
+  background-color: var(--light-green);
+  transition: 1s ease;
+  cursor: pointer;
 }
 
 .cancel-project,
