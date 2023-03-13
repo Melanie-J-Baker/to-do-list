@@ -395,7 +395,10 @@ textarea#new-desc {
 
 @media only screen and (min-width: 550px) {
   .new-project,
-  .new-task {
+  .edit-task-modal,
+  .change-project,
+  .new-task,
+  .error {
     width: 500px;
   }
 
