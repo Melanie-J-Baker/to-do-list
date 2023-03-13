@@ -169,6 +169,16 @@ input[type="checkbox"]:checked + p.task-text {
   padding-left: 10px;
 }
 
+.desc-text {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  min-height: 35px;
+  display: none;
+}
+
 .new-project,
 .change-project {
   position: absolute;
@@ -357,6 +367,10 @@ textarea#new-desc {
     padding-left: 5px;
     padding-right: 5px;
     font-size: 1rem;
+    display: block;
+  }
+
+  .task:hover + .desc-text {
     display: block;
   }
 }

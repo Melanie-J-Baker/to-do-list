@@ -100,6 +100,13 @@ function renderToDos() {
     taskIconsDiv.appendChild(toDoDelete);
 
     tasksDiv.appendChild(toDo);
+
+    if (task.desc) {
+      const toDoDesc = document.createElement("p");
+      toDoDesc.classList.add("desc-text");
+      toDoDesc.textContent = task.desc;
+      tasksDiv.appendChild(toDoDesc);
+    }
   });
   createTaskBtnListeners();
 }
