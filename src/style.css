@@ -205,7 +205,6 @@ input[type="checkbox"]:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   width: 90%;
   padding: 20px;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
@@ -215,6 +214,7 @@ input[type="checkbox"]:hover {
   border-radius: 10px;
   border: 2px solid white;
   box-shadow: 3px 3px 5px 2px var(--shadow);
+  transform: translate(-50%, -50%);
 }
 
 .error {
