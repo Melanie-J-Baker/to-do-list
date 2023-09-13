@@ -1,7 +1,11 @@
-import "./style.css";
-import "./staticListeners";
-import { newProject, newToDo } from "./logic";
-import { renderHead, renderProjects, renderToDos } from "./render";
+import "/To-Do-List/src/style.css";
+import "/To-Do-List/src/staticListeners";
+import { newProject, newToDo } from "/To-Do-List/src/logic";
+import {
+  renderHead,
+  renderProjects,
+  renderToDos,
+} from "/To-Do-List/src/render";
 
 let projectLibrary = [];
 

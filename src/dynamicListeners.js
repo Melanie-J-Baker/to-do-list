@@ -1,12 +1,11 @@
-//import { projectLibrary } from ".";
-import { editTask } from "./DOM";
+import { editTask } from "/To-Do-List/src/DOM";
 import {
   changeCurrentProject,
   removeProject,
   deleteTask,
   storeProjects,
 } from "./logic";
-import { renderProjects } from "./render";
+import { renderProjects } from "/To-Do-List/src/render";
 
 function createProjBtnListeners() {
   let projects = document.querySelectorAll(".project");
