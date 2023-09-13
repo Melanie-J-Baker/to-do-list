@@ -4,7 +4,7 @@ import {
   newTask,
   editTask,
   errorMessage,
-} from "/To-Do-List/src/DOM";
+} from "./DOM";
 
 newProjectModal.addProjectBtn.addEventListener("click", newProjectModal.show);
 newProjectModal.cancelProjectBtn.addEventListener(

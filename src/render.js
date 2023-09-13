@@ -1,9 +1,9 @@
-import { projectLibrary } from "/To-Do-List/src/index";
-import { currentProject } from "/To-Do-List/src/logic";
+import { projectLibrary } from "./index";
+import { currentProject } from "./logic";
 import {
   createProjBtnListeners,
   createTaskBtnListeners,
-} from "/To-Do-List/src/dynamicListeners";
+} from "./dynamicListeners";
 import { format } from "date-fns";
 
 import highIcon from "./assets/high.svg";
