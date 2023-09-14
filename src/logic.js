@@ -1,6 +1,6 @@
-import { projectLibrary } from "./index";
-import { newTask, newProjectNameModal } from "./DOM";
-import { renderProjects, renderHead, renderToDos } from "./render";
+import { projectLibrary } from "./index.js";
+import { newTask, newProjectNameModal } from "./DOM.js";
+import { renderProjects, renderHead, renderToDos } from "./render.js";
 
 const newProject = (name) => {
   _removeCurrent();

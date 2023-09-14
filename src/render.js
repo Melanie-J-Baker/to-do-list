@@ -1,9 +1,9 @@
-import { projectLibrary } from "./index";
-import { currentProject } from "./logic";
+import { projectLibrary } from "./index.js";
+import { currentProject } from "./logic.js";
 import {
   createProjBtnListeners,
   createTaskBtnListeners,
-} from "./dynamicListeners";
+} from "./dynamicListeners.js";
 import { format } from "date-fns";
 
 import highIcon from "./assets/high.svg";

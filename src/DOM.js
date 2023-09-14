@@ -1,5 +1,5 @@
-import { newProject, currentProject, newToDo, storeProjects } from "./logic";
-import { renderProjects, renderHead, renderToDos } from "./render";
+import { newProject, currentProject, newToDo, storeProjects } from "./logic.js";
+import { renderProjects, renderHead, renderToDos } from "./render.js";
 
 const newProjectModal = (() => {
   const addProjectBtn = document.querySelector(".add-project");
