@@ -1,8 +1,8 @@
 :root {
-  --coral: rgb(248, 163, 132);
-  --light-coral: rgb(252, 200, 182);
+  --coral: rgb(247, 165, 135);
+  --light-coral: rgb(252, 220, 210);
   --dark-teal: rgb(0, 37, 25);
-  --light-teal: rgb(1, 128, 64);
+  --light-teal: rgb(1, 82, 41);
   --light-green: rgb(93, 228, 160);
   --shadow: rgb(41, 40, 40);
 }
@@ -22,16 +22,17 @@
 }
 
 .projects {
-  background-color: rgb(19, 65, 38);
+  background-color: var(--dark-teal);
   color: white;
 }
 
 .projects-head {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
+  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   min-height: 7vh;
   box-shadow: 0px 3px 5px var(--shadow);
+  border-right: 2px solid var(--light-teal);
 }
 
 .projects-heading {
@@ -76,7 +77,6 @@
   background-color: var(--coral);
   display: flex;
   flex-direction: column;
-  border-left: 3px solid var(--shadow);
 }
 
 .main-head {
@@ -178,7 +178,7 @@ input[type="checkbox"]:hover {
 }
 
 .task-icons-div {
-  background-color: rgb(252, 173, 144);
+  background-color: var(--coral);
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
