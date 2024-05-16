@@ -3,7 +3,7 @@
 To-do list app created using JavaScipt as part of the Odin Project curriculum: https://www.theodinproject.com/lessons/node-path-javascript-todo-list
 
 Try it out at:
-https://melanie-j-baker.github.io/To-Do-List/
+https://melanie-j-baker.github.io/to-do-list/
 
 To-do list has projects or separate lists of todos. Users can create new projects and choose which project their todos go into.
 
