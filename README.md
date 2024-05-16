@@ -1,6 +1,9 @@
 # To-Do-List
 
-To-do list app created as part of the Odin Project curriculum.
+To-do list app created using JavaScipt as part of the Odin Project curriculum: https://www.theodinproject.com/lessons/node-path-javascript-todo-list
+
+Try it out at:
+https://melanie-j-baker.github.io/To-Do-List/
 
 To-do list has projects or separate lists of todos. Users can create new projects and choose which project their todos go into.
 
@@ -13,9 +16,6 @@ The User Interface can do the following:
 - expand a single todo to see/edit its details
 - delete a todo
 Projects (and todos) saved to localStorage every time a new project (or todo) is created, and data retrieved from localStorage when app is first loaded.
-
-Try out the app at:
-https://melanie-j-baker.github.io/To-Do-List/
 
 ![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/d8204367-4af0-4657-b96a-d70dc44fa0a1)
 ![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/89428405-4ea3-41d4-a31a-5c1a8b235cba)
