@@ -1,9 +1,9 @@
 :root {
-  --coral: rgb(247, 165, 135);
-  --light-coral: rgb(252, 220, 210);
+  --coral: rgb(247, 143, 105);
+  --light-coral: rgb(253, 236, 230);
   --dark-teal: rgb(0, 37, 25);
-  --light-teal: rgb(1, 82, 41);
-  --light-green: rgb(93, 228, 160);
+  --light-teal: rgb(45, 87, 66);
+  --light-green: rgb(136, 224, 180);
   --shadow: rgb(41, 40, 40);
 }
 
@@ -31,7 +31,6 @@
   flex-direction: row;
   background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
   min-height: 7vh;
-  box-shadow: 0px 3px 5px var(--shadow);
   border-right: 2px solid var(--light-teal);
 }
 
@@ -40,7 +39,6 @@
   padding: 5px;
   text-align: center;
   color: white;
-  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;
   font-size: 2rem;
   align-self: center;
   text-shadow: 2px 2px 1px var(--dark-teal);
@@ -84,7 +82,6 @@
   flex-direction: row;
   background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
   align-items: center;
-  box-shadow: 0px 3px 5px var(--shadow);
   min-height: 7vh;
   margin-bottom: 5px;
 }
@@ -93,7 +90,6 @@
   flex: 1;
   text-align: center;
   color: white;
-  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;
   font-size: 2rem;
   padding: 5px;
   text-shadow: 2px 2px 1px var(--dark-teal);
