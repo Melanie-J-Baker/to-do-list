@@ -15,9 +15,9 @@ The User Interface can do the following:
 - view all todos in each project (probably just the title and duedate. changes color for different priorities)
 - expand a single todo to see/edit its details
 - delete a todo
-Projects (and todos) saved to localStorage every time a new project (or todo) is created, and data retrieved from localStorage when app is first loaded.
+  Projects (and todos) saved to localStorage every time a new project (or todo) is created, and data retrieved from localStorage when app is first loaded.
 
-![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/d8204367-4af0-4657-b96a-d70dc44fa0a1)
+![image](https://github.com/user-attachments/assets/07503af0-3762-4e07-811d-413a7d9a6713)
 ![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/89428405-4ea3-41d4-a31a-5c1a8b235cba)
 ![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/7f9c4e4f-75bd-45a1-8d07-786ccdcfafbe)
 ![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/8a7178ce-a2eb-4a9e-bc39-4a2d788d05c3)
