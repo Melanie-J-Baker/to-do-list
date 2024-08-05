@@ -9,7 +9,7 @@
           i = n.n(o)()(a());
         i.push([
           e.id,
-          ':root {\n  --coral: rgb(247, 165, 135);\n  --light-coral: rgb(252, 220, 210);\n  --dark-teal: rgb(0, 37, 25);\n  --light-teal: rgb(1, 82, 41);\n  --light-green: rgb(93, 228, 160);\n  --shadow: rgb(41, 40, 40);\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: "Ubuntu Condensed", sans-serif;\n}\n\n.content {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  height: 98vh;\n  position: relative;\n}\n\n.projects {\n  background-color: var(--dark-teal);\n  color: white;\n}\n\n.projects-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  min-height: 7vh;\n  box-shadow: 0px 3px 5px var(--shadow);\n  border-right: 2px solid var(--light-teal);\n}\n\n.projects-heading {\n  flex: 1;\n  padding: 5px;\n  text-align: center;\n  color: white;\n  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;\n  font-size: 2rem;\n  align-self: center;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.add-project {\n  align-self: center;\n  margin-right: 6px;\n  width: 25px;\n  height: 25px;\n}\n\n.add-project:hover {\n  width: 30px;\n  height: 30px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.projects-main {\n  font-size: 1.5rem;\n}\n\n.project {\n  padding: 10px 5px 10px 5px;\n}\n\n.project:hover {\n  cursor: pointer;\n  background-color: var(--light-teal);\n}\n\n.main {\n  background-color: var(--coral);\n  display: flex;\n  flex-direction: column;\n}\n\n.main-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));\n  align-items: center;\n  box-shadow: 0px 3px 5px var(--shadow);\n  min-height: 7vh;\n  margin-bottom: 5px;\n}\n\n.main-heading {\n  flex: 1;\n  text-align: center;\n  color: white;\n  font-family: "Gloria Hallelujah", "Gill Sans", sans-serif;\n  font-size: 2rem;\n  padding: 5px;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.edit-project,\n.del-project,\n.add-task {\n  margin: 2px;\n  width: 20px;\n  height: 20px;\n  color: white;\n}\n\n.edit-project:hover,\n.del-project:hover,\n.add-task:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.add-task {\n  margin-right: 15px;\n}\n\n.tasks {\n  display: grid;\n  grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));\n}\n\n.task {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-size: 1.2rem;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n}\n\n.task:hover {\n  cursor: pointer;\n  background-color: var(--light-coral);\n}\n\n.due-date {\n  display: none;\n}\n\ninput[type="checkbox"],\n.edit-task,\n.del-task,\n.priority-image {\n  margin: 5px;\n  height: 20px;\n  width: 20px;\n}\n\n.edit-task:hover,\n.del-task:hover,\n.priority-image:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n}\n\ninput[type="checkbox"]:checked {\n  accent-color: var(--dark-teal);\n}\n\ninput[type="checkbox"]:checked + p.task-text {\n  text-decoration: line-through;\n}\n\ninput[type="checkbox"]:hover {\n  cursor: pointer;\n  height: 25px;\n  width: 25px;\n}\n\n.task-icons-div {\n  background-color: var(--coral);\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 10px;\n}\n\n.task-text {\n  flex: 1;\n  padding-left: 10px;\n}\n\n.desc-text {\n  font-size: 1.1em;\n  font-style: italic;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n  display: none;\n  transition: 1s ease;\n}\n\n.new-project,\n.change-project {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 90%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  transform: translate(-50%, -50%);\n}\n\n.error {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  width: 50%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  justify-content: center;\n}\n\n.project-input-div,\n.change-project-input-div {\n  display: flex;\n  flex-direction: column;\n  font-size: 1.2rem;\n  justify-content: space-around;\n  align-items: center;\n}\n\ninput#project-name,\ninput#new-project-name {\n  height: 1.6rem;\n  margin-top: 10px;\n  font-size: 1.2rem;\n}\n\n.project-btns-div,\n.change-project-btns-div {\n  display: flex;\n  flex-direction: row;\n  padding: 5px;\n  justify-content: center;\n  padding-top: 15px;\n}\n\n.new-task {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.edit-task-modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.form-div {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\ninput#name,\ninput#date,\nselect#priority,\ninput#new-name,\ninput#new-date,\nselect#new-priority {\n  height: 1.8rem;\n  font-size: 1.2rem;\n}\n\ntextarea#desc,\ntextarea#new-desc {\n  font-size: 1.2rem;\n}\n\n.form-label {\n  padding: 5px;\n  margin-right: 10px;\n}\n\n.create-project,\n.change-project-btn,\n.create-task,\n.update-task,\n.ok {\n  background-color: var(--coral);\n  font-weight: bold;\n}\n\n.create-project:hover,\n.change-project-btn:hover,\n.create-task:hover,\n.update-task:hover,\n.ok:hover,\n.cancel-project:hover,\n.cancel-task:hover,\n.cancel-update-task:hover,\n.change-cancel-project:hover {\n  background-color: var(--light-green);\n  transition: 1s ease;\n  cursor: pointer;\n}\n\n.cancel-project,\n.cancel-task,\n.cancel-update-task,\n.change-cancel-project {\n  background-color: rgb(245, 55, 22);\n  font-weight: bold;\n}\n\n.create-task,\n.cancel-task,\n.update-task,\n.cancel-update-task,\n.create-project,\n.cancel-project,\n.change-project-btn,\n.change-cancel-project,\n.ok {\n  padding: 3px 6px 3px 6px;\n  margin-left: 6px;\n  margin-right: 6px;\n  border-radius: 9px;\n  font-size: 1.2rem;\n  box-shadow: 2px 2px 4px black;\n}\n\n.create-task,\n.cancel-task {\n  padding: 8px 10px 8px 10px;\n}\n\n.create-task {\n  margin-right: 15px;\n}\n\n.form-btns.div {\n  padding: 5px;\n}\n\n@media only screen and (max-width: 396px) {\n  .priority-image,\n  .edit-task,\n  .del-task {\n    padding: 0;\n    margin: 0;\n  }\n}\n\n@media only screen and (min-width: 550px) {\n  .new-project,\n  .edit-task-modal,\n  .change-project,\n  .new-task,\n  .error {\n    width: 500px;\n  }\n\n  .due-date {\n    padding-left: 5px;\n    padding-right: 5px;\n    font-size: 1rem;\n    display: block;\n  }\n\n  .task:hover + .desc-text {\n    display: block;\n  }\n}\n\n@media only screen and (min-width: 980px) {\n  .projects-main {\n    padding-left: 10px;\n  }\n\n  .add-project,\n  .edit-project,\n  .del-project,\n  .add-task,\n  .edit-task,\n  .del-task,\n  .priority-image {\n    height: 25px;\n    width: 25px;\n  }\n\n  .projects-heading,\n  .main-heading {\n    font-size: 3rem;\n    padding: 10px;\n  }\n\n  .project {\n    font-size: 2rem;\n  }\n\n  .task-text {\n    font-size: 1.5rem;\n  }\n\n  .due-date {\n    font-size: 1.5rem;\n  }\n\n  .project-input-div {\n    font-size: 1.5rem;\n  }\n\n  .new-task {\n    font-size: 1.5rem;\n  }\n}\n',
+          ':root {\n  --coral: rgb(247, 143, 105);\n  --light-coral: rgb(253, 236, 230);\n  --dark-teal: rgb(0, 37, 25);\n  --light-teal: rgb(45, 87, 66);\n  --light-green: rgb(136, 224, 180);\n  --shadow: rgb(41, 40, 40);\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: "Ubuntu Condensed", sans-serif;\n}\n\n.content {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  height: 98vh;\n  position: relative;\n}\n\n.projects {\n  background-color: var(--dark-teal);\n  color: white;\n}\n\n.projects-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  min-height: 7vh;\n  border-right: 2px solid var(--light-teal);\n}\n\n.projects-heading {\n  flex: 1;\n  padding: 5px;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  align-self: center;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.add-project {\n  align-self: center;\n  margin-right: 6px;\n  width: 25px;\n  height: 25px;\n}\n\n.add-project:hover {\n  width: 30px;\n  height: 30px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.projects-main {\n  font-size: 1.5rem;\n}\n\n.project {\n  padding: 10px 5px 10px 5px;\n}\n\n.project:hover {\n  cursor: pointer;\n  background-color: var(--light-teal);\n}\n\n.main {\n  background-color: var(--coral);\n  display: flex;\n  flex-direction: column;\n}\n\n.main-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));\n  align-items: center;\n  min-height: 7vh;\n  margin-bottom: 5px;\n}\n\n.main-heading {\n  flex: 1;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  padding: 5px;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.edit-project,\n.del-project,\n.add-task {\n  margin: 2px;\n  width: 20px;\n  height: 20px;\n  color: white;\n}\n\n.edit-project:hover,\n.del-project:hover,\n.add-task:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.add-task {\n  margin-right: 15px;\n}\n\n.tasks {\n  display: grid;\n  grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));\n}\n\n.task {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-size: 1.2rem;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n}\n\n.task:hover {\n  cursor: pointer;\n  background-color: var(--light-coral);\n}\n\n.due-date {\n  display: none;\n}\n\ninput[type="checkbox"],\n.edit-task,\n.del-task,\n.priority-image {\n  margin: 5px;\n  height: 20px;\n  width: 20px;\n}\n\n.edit-task:hover,\n.del-task:hover,\n.priority-image:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n}\n\ninput[type="checkbox"]:checked {\n  accent-color: var(--dark-teal);\n}\n\ninput[type="checkbox"]:checked + p.task-text {\n  text-decoration: line-through;\n}\n\ninput[type="checkbox"]:hover {\n  cursor: pointer;\n  height: 25px;\n  width: 25px;\n}\n\n.task-icons-div {\n  background-color: var(--coral);\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 10px;\n}\n\n.task-text {\n  flex: 1;\n  padding-left: 10px;\n}\n\n.desc-text {\n  font-size: 1.1em;\n  font-style: italic;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n  display: none;\n  transition: 1s ease;\n}\n\n.new-project,\n.change-project {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 90%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  transform: translate(-50%, -50%);\n}\n\n.error {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  width: 50%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  justify-content: center;\n}\n\n.project-input-div,\n.change-project-input-div {\n  display: flex;\n  flex-direction: column;\n  font-size: 1.2rem;\n  justify-content: space-around;\n  align-items: center;\n}\n\ninput#project-name,\ninput#new-project-name {\n  height: 1.6rem;\n  margin-top: 10px;\n  font-size: 1.2rem;\n}\n\n.project-btns-div,\n.change-project-btns-div {\n  display: flex;\n  flex-direction: row;\n  padding: 5px;\n  justify-content: center;\n  padding-top: 15px;\n}\n\n.new-task {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.edit-task-modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.form-div {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\ninput#name,\ninput#date,\nselect#priority,\ninput#new-name,\ninput#new-date,\nselect#new-priority {\n  height: 1.8rem;\n  font-size: 1.2rem;\n}\n\ntextarea#desc,\ntextarea#new-desc {\n  font-size: 1.2rem;\n}\n\n.form-label {\n  padding: 5px;\n  margin-right: 10px;\n}\n\n.create-project,\n.change-project-btn,\n.create-task,\n.update-task,\n.ok {\n  background-color: var(--coral);\n  font-weight: bold;\n}\n\n.create-project:hover,\n.change-project-btn:hover,\n.create-task:hover,\n.update-task:hover,\n.ok:hover,\n.cancel-project:hover,\n.cancel-task:hover,\n.cancel-update-task:hover,\n.change-cancel-project:hover {\n  background-color: var(--light-green);\n  transition: 1s ease;\n  cursor: pointer;\n}\n\n.cancel-project,\n.cancel-task,\n.cancel-update-task,\n.change-cancel-project {\n  background-color: rgb(245, 55, 22);\n  font-weight: bold;\n}\n\n.create-task,\n.cancel-task,\n.update-task,\n.cancel-update-task,\n.create-project,\n.cancel-project,\n.change-project-btn,\n.change-cancel-project,\n.ok {\n  padding: 3px 6px 3px 6px;\n  margin-left: 6px;\n  margin-right: 6px;\n  border-radius: 9px;\n  font-size: 1.2rem;\n  box-shadow: 2px 2px 4px black;\n}\n\n.create-task,\n.cancel-task {\n  padding: 8px 10px 8px 10px;\n}\n\n.create-task {\n  margin-right: 15px;\n}\n\n.form-btns.div {\n  padding: 5px;\n}\n\n@media only screen and (max-width: 396px) {\n  .priority-image,\n  .edit-task,\n  .del-task {\n    padding: 0;\n    margin: 0;\n  }\n}\n\n@media only screen and (min-width: 550px) {\n  .new-project,\n  .edit-task-modal,\n  .change-project,\n  .new-task,\n  .error {\n    width: 500px;\n  }\n\n  .due-date {\n    padding-left: 5px;\n    padding-right: 5px;\n    font-size: 1rem;\n    display: block;\n  }\n\n  .task:hover + .desc-text {\n    display: block;\n  }\n}\n\n@media only screen and (min-width: 980px) {\n  .projects-main {\n    padding-left: 10px;\n  }\n\n  .add-project,\n  .edit-project,\n  .del-project,\n  .add-task,\n  .edit-task,\n  .del-task,\n  .priority-image {\n    height: 25px;\n    width: 25px;\n  }\n\n  .projects-heading,\n  .main-heading {\n    font-size: 3rem;\n    padding: 10px;\n  }\n\n  .project {\n    font-size: 2rem;\n  }\n\n  .task-text {\n    font-size: 1.5rem;\n  }\n\n  .due-date {\n    font-size: 1.5rem;\n  }\n\n  .project-input-div {\n    font-size: 1.5rem;\n  }\n\n  .new-task {\n    font-size: 1.5rem;\n  }\n}\n',
           "",
         ]);
         const c = i;
@@ -928,7 +928,7 @@
         if (0 === a) return "Z";
         switch (t) {
           case "X":
-            return A(a);
+            return H(a);
           case "XXXX":
           case "XX":
             return F(a);
@@ -940,7 +940,7 @@
         var a = (r._originalDate || e).getTimezoneOffset();
         switch (t) {
           case "x":
-            return A(a);
+            return H(a);
           case "xxxx":
           case "xx":
             return F(a);
@@ -954,7 +954,7 @@
           case "O":
           case "OO":
           case "OOO":
-            return "GMT" + H(a, ":");
+            return "GMT" + A(a, ":");
           default:
             return "GMT" + F(a, ":");
         }
@@ -965,7 +965,7 @@
           case "z":
           case "zz":
           case "zzz":
-            return "GMT" + H(a, ":");
+            return "GMT" + A(a, ":");
           default:
             return "GMT" + F(a, ":");
         }
@@ -978,7 +978,7 @@
         return P((r._originalDate || e).getTime(), t.length);
       },
     };
-    function H(e, t) {
+    function A(e, t) {
       var n = e > 0 ? "-" : "+",
         r = Math.abs(e),
         a = Math.floor(r / 60),
@@ -987,7 +987,7 @@
       var i = t || "";
       return n + String(a) + i + P(o, 2);
     }
-    function A(e, t) {
+    function H(e, t) {
       return e % 60 == 0
         ? (e > 0 ? "-" : "+") + P(Math.abs(e) / 60, 2)
         : F(e, t);
@@ -998,8 +998,8 @@
         a = Math.abs(e);
       return r + P(Math.floor(a / 60), 2) + n + P(a % 60, 2);
     }
-    const G = B;
-    var I = function (e, t) {
+    const I = B;
+    var Q = function (e, t) {
         switch (e) {
           case "P":
             return t.date({ width: "short" });
@@ -1011,7 +1011,7 @@
             return t.date({ width: "full" });
         }
       },
-      Q = function (e, t) {
+      G = function (e, t) {
         switch (e) {
           case "p":
             return t.time({ width: "short" });
@@ -1024,13 +1024,13 @@
         }
       };
     const R = {
-      p: Q,
+      p: G,
       P: function (e, t) {
         var n,
           r = e.match(/(P+)(p+)?/) || [],
           a = r[1],
           o = r[2];
-        if (!o) return I(e, t);
+        if (!o) return Q(e, t);
         switch (a) {
           case "P":
             n = t.dateTime({ width: "short" });
@@ -1044,7 +1044,7 @@
           default:
             n = t.dateTime({ width: "full" });
         }
-        return n.replace("{{date}}", I(a, t)).replace("{{time}}", Q(o, t));
+        return n.replace("{{date}}", Q(a, t)).replace("{{time}}", G(o, t));
       },
     };
     var X = ["D", "DD"],
@@ -1664,7 +1664,7 @@
           if ("'" === i)
             return (o = (a = r).match(de)) ? o[1].replace(se, "'") : a;
           var c,
-            d = G[i];
+            d = I[i];
           if (d)
             return (
               (null != n && n.useAdditionalWeekYearTokens) ||
