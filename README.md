@@ -17,7 +17,7 @@ The User Interface can do the following:
 - delete a todo
   Projects (and todos) saved to localStorage every time a new project (or todo) is created, and data retrieved from localStorage when app is first loaded.
 
-![image](https://github.com/user-attachments/assets/07503af0-3762-4e07-811d-413a7d9a6713)
-![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/89428405-4ea3-41d4-a31a-5c1a8b235cba)
-![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/7f9c4e4f-75bd-45a1-8d07-786ccdcfafbe)
-![image](https://github.com/Melanie-J-Baker/To-Do-List/assets/104843873/8a7178ce-a2eb-4a9e-bc39-4a2d788d05c3)
+![image](https://github.com/user-attachments/assets/3aba05d7-f2f0-4722-b174-379bc72cbd82)
+![image](https://github.com/user-attachments/assets/386660eb-23a3-4dfb-bd49-223186cce363)
+![image](https://github.com/user-attachments/assets/6d1df369-9627-4eb2-98cf-f50fe7d6a27a)
+![image](https://github.com/user-attachments/assets/5d12375a-afb5-4778-b88c-78245208562b)
