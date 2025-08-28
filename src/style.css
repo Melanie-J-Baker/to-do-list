@@ -136,6 +136,7 @@
 .task:hover {
   cursor: pointer;
   background-color: var(--light-coral);
+  transition: 0.5s ease;
 }
 
 .due-date {
@@ -178,6 +179,11 @@ input[type="checkbox"]:hover {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
+}
+
+.task-icons-div:hover {
+  background-color: var(--light-coral);
+  transition: 0.5s ease;
 }
 
 .task-text {
