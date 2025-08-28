@@ -1,9 +1,9 @@
 :root {
-  --coral: rgb(247, 178, 153);
-  --light-coral: rgb(253, 236, 230);
-  --dark-teal: rgb(0, 37, 29);
-  --light-teal: rgb(23, 90, 76);
-  --light-green: rgb(136, 224, 180);
+  --background: rgb(0, 37, 29);
+  --highlight: rgb(23, 90, 76);
+  --dark-header: black;
+  --light-header: rgb(88, 88, 88);
+  --lightest-header: rgb(224, 236, 230);
   --shadow: rgb(41, 40, 40);
 }
 
@@ -22,16 +22,16 @@
 }
 
 .projects {
-  background-color: var(--dark-teal);
+  background-color: var(--dark-header);
   color: white;
 }
 
 .projects-head {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--dark-header), var(--light-header));
   min-height: 7vh;
-  border-right: 2px solid var(--light-teal);
+  border-right: 2px solid var(--light-header);
 }
 
 .projects-heading {
@@ -41,7 +41,7 @@
   color: white;
   font-size: 2rem;
   align-self: center;
-  text-shadow: 2px 2px 1px var(--dark-teal);
+  text-shadow: 2px 2px 1px var(--dark-header);
 }
 
 .add-project {
@@ -68,11 +68,11 @@
 
 .project:hover {
   cursor: pointer;
-  background-color: var(--light-teal);
+  background-color: var(--light-header);
 }
 
 .main {
-  background-color: var(--coral);
+  background-color: var(--background);
   display: flex;
   flex-direction: column;
 }
@@ -80,7 +80,7 @@
 .main-head {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));
+  background: linear-gradient(90deg, var(--light-header), var(--dark-header));
   align-items: center;
   min-height: 7vh;
   margin-bottom: 5px;
@@ -92,7 +92,7 @@
   color: white;
   font-size: 2rem;
   padding: 5px;
-  text-shadow: 2px 2px 1px var(--dark-teal);
+  text-shadow: 2px 2px 1px var(--dark-header);
 }
 
 .edit-project,
@@ -135,7 +135,7 @@
 
 .task:hover {
   cursor: pointer;
-  background-color: var(--light-coral);
+  background-color: var(--highlight);
   transition: 0.5s ease;
 }
 
@@ -161,7 +161,7 @@ input[type="checkbox"],
 }
 
 input[type="checkbox"]:checked {
-  accent-color: var(--dark-teal);
+  accent-color: var(--dark-header);
 }
 
 input[type="checkbox"]:checked + p.task-text {
@@ -175,14 +175,14 @@ input[type="checkbox"]:hover {
 }
 
 .task-icons-div {
-  background-color: var(--coral);
+  background-color: var(--background);
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 10px;
 }
 
 .task-icons-div:hover {
-  background-color: var(--light-coral);
+  background-color: var(--highlight);
   transition: 0.5s ease;
 }
 
@@ -209,7 +209,7 @@ input[type="checkbox"]:hover {
   top: 50%;
   width: 90%;
   padding: 20px;
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--dark-header), var(--light-header));
   color: white;
   display: none;
   grid-template-rows: repeat(2, 1fr);
@@ -226,7 +226,7 @@ input[type="checkbox"]:hover {
   transform: translate(-50%, -50%);
   width: 50%;
   padding: 20px;
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--dark-header), var(--light-header));
   color: white;
   display: none;
   grid-template-rows: repeat(2, 1fr);
@@ -266,7 +266,7 @@ input#new-project-name {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--dark-header), var(--light-header));
   width: 90%;
   height: 70%;
   display: none;
@@ -285,7 +285,7 @@ input#new-project-name {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));
+  background: linear-gradient(90deg, var(--dark-header), var(--light-header));
   width: 90%;
   height: 70%;
   display: none;
@@ -330,7 +330,7 @@ textarea#new-desc {
 .create-task,
 .update-task,
 .ok {
-  background-color: var(--coral);
+  background-color: var(--background);
   font-weight: bold;
 }
 
@@ -343,7 +343,7 @@ textarea#new-desc {
 .cancel-task:hover,
 .cancel-update-task:hover,
 .change-cancel-project:hover {
-  background-color: var(--light-green);
+  background-color: var(--lightest-header);
   transition: 1s ease;
   cursor: pointer;
 }
