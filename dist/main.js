@@ -2,17 +2,17 @@
   "use strict";
   var e = {
       426: (e, t, n) => {
-        n.d(t, { Z: () => c });
+        n.d(t, { Z: () => d });
         var r = n(81),
           a = n.n(r),
           o = n(645),
           i = n.n(o)()(a());
         i.push([
           e.id,
-          ':root {\n  --coral: rgb(247, 143, 105);\n  --light-coral: rgb(253, 236, 230);\n  --dark-teal: rgb(0, 37, 25);\n  --light-teal: rgb(45, 87, 66);\n  --light-green: rgb(136, 224, 180);\n  --shadow: rgb(41, 40, 40);\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: "Ubuntu Condensed", sans-serif;\n}\n\n.content {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  height: 98vh;\n  position: relative;\n}\n\n.projects {\n  background-color: var(--dark-teal);\n  color: white;\n}\n\n.projects-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  min-height: 7vh;\n  border-right: 2px solid var(--light-teal);\n}\n\n.projects-heading {\n  flex: 1;\n  padding: 5px;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  align-self: center;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.add-project {\n  align-self: center;\n  margin-right: 6px;\n  width: 25px;\n  height: 25px;\n}\n\n.add-project:hover {\n  width: 30px;\n  height: 30px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.projects-main {\n  font-size: 1.5rem;\n}\n\n.project {\n  padding: 10px 5px 10px 5px;\n}\n\n.project:hover {\n  cursor: pointer;\n  background-color: var(--light-teal);\n}\n\n.main {\n  background-color: var(--coral);\n  display: flex;\n  flex-direction: column;\n}\n\n.main-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--light-teal), var(--dark-teal));\n  align-items: center;\n  min-height: 7vh;\n  margin-bottom: 5px;\n}\n\n.main-heading {\n  flex: 1;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  padding: 5px;\n  text-shadow: 2px 2px 1px var(--dark-teal);\n}\n\n.edit-project,\n.del-project,\n.add-task {\n  margin: 2px;\n  width: 20px;\n  height: 20px;\n  color: white;\n}\n\n.edit-project:hover,\n.del-project:hover,\n.add-task:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.add-task {\n  margin-right: 15px;\n}\n\n.tasks {\n  display: grid;\n  grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));\n}\n\n.task {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-size: 1.2rem;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n}\n\n.task:hover {\n  cursor: pointer;\n  background-color: var(--light-coral);\n}\n\n.due-date {\n  display: none;\n}\n\ninput[type="checkbox"],\n.edit-task,\n.del-task,\n.priority-image {\n  margin: 5px;\n  height: 20px;\n  width: 20px;\n}\n\n.edit-task:hover,\n.del-task:hover,\n.priority-image:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n}\n\ninput[type="checkbox"]:checked {\n  accent-color: var(--dark-teal);\n}\n\ninput[type="checkbox"]:checked + p.task-text {\n  text-decoration: line-through;\n}\n\ninput[type="checkbox"]:hover {\n  cursor: pointer;\n  height: 25px;\n  width: 25px;\n}\n\n.task-icons-div {\n  background-color: var(--coral);\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 10px;\n}\n\n.task-text {\n  flex: 1;\n  padding-left: 10px;\n}\n\n.desc-text {\n  font-size: 1.1em;\n  font-style: italic;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n  display: none;\n  transition: 1s ease;\n}\n\n.new-project,\n.change-project {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 90%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  transform: translate(-50%, -50%);\n}\n\n.error {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  width: 50%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  justify-content: center;\n}\n\n.project-input-div,\n.change-project-input-div {\n  display: flex;\n  flex-direction: column;\n  font-size: 1.2rem;\n  justify-content: space-around;\n  align-items: center;\n}\n\ninput#project-name,\ninput#new-project-name {\n  height: 1.6rem;\n  margin-top: 10px;\n  font-size: 1.2rem;\n}\n\n.project-btns-div,\n.change-project-btns-div {\n  display: flex;\n  flex-direction: row;\n  padding: 5px;\n  justify-content: center;\n  padding-top: 15px;\n}\n\n.new-task {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.edit-task-modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-teal), var(--light-teal));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.form-div {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\ninput#name,\ninput#date,\nselect#priority,\ninput#new-name,\ninput#new-date,\nselect#new-priority {\n  height: 1.8rem;\n  font-size: 1.2rem;\n}\n\ntextarea#desc,\ntextarea#new-desc {\n  font-size: 1.2rem;\n}\n\n.form-label {\n  padding: 5px;\n  margin-right: 10px;\n}\n\n.create-project,\n.change-project-btn,\n.create-task,\n.update-task,\n.ok {\n  background-color: var(--coral);\n  font-weight: bold;\n}\n\n.create-project:hover,\n.change-project-btn:hover,\n.create-task:hover,\n.update-task:hover,\n.ok:hover,\n.cancel-project:hover,\n.cancel-task:hover,\n.cancel-update-task:hover,\n.change-cancel-project:hover {\n  background-color: var(--light-green);\n  transition: 1s ease;\n  cursor: pointer;\n}\n\n.cancel-project,\n.cancel-task,\n.cancel-update-task,\n.change-cancel-project {\n  background-color: rgb(245, 55, 22);\n  font-weight: bold;\n}\n\n.create-task,\n.cancel-task,\n.update-task,\n.cancel-update-task,\n.create-project,\n.cancel-project,\n.change-project-btn,\n.change-cancel-project,\n.ok {\n  padding: 3px 6px 3px 6px;\n  margin-left: 6px;\n  margin-right: 6px;\n  border-radius: 9px;\n  font-size: 1.2rem;\n  box-shadow: 2px 2px 4px black;\n}\n\n.create-task,\n.cancel-task {\n  padding: 8px 10px 8px 10px;\n}\n\n.create-task {\n  margin-right: 15px;\n}\n\n.form-btns.div {\n  padding: 5px;\n}\n\n@media only screen and (max-width: 396px) {\n  .priority-image,\n  .edit-task,\n  .del-task {\n    padding: 0;\n    margin: 0;\n  }\n}\n\n@media only screen and (min-width: 550px) {\n  .new-project,\n  .edit-task-modal,\n  .change-project,\n  .new-task,\n  .error {\n    width: 500px;\n  }\n\n  .due-date {\n    padding-left: 5px;\n    padding-right: 5px;\n    font-size: 1rem;\n    display: block;\n  }\n\n  .task:hover + .desc-text {\n    display: block;\n  }\n}\n\n@media only screen and (min-width: 980px) {\n  .projects-main {\n    padding-left: 10px;\n  }\n\n  .add-project,\n  .edit-project,\n  .del-project,\n  .add-task,\n  .edit-task,\n  .del-task,\n  .priority-image {\n    height: 25px;\n    width: 25px;\n  }\n\n  .projects-heading,\n  .main-heading {\n    font-size: 3rem;\n    padding: 10px;\n  }\n\n  .project {\n    font-size: 2rem;\n  }\n\n  .task-text {\n    font-size: 1.5rem;\n  }\n\n  .due-date {\n    font-size: 1.5rem;\n  }\n\n  .project-input-div {\n    font-size: 1.5rem;\n  }\n\n  .new-task {\n    font-size: 1.5rem;\n  }\n}\n',
+          ':root {\n  --background: rgb(0, 37, 29);\n  --highlight: rgb(23, 90, 76);\n  --dark-header: black;\n  --light-header: rgb(88, 88, 88);\n  --lightest-header: rgb(224, 236, 230);\n  --shadow: rgb(41, 40, 40);\n}\n\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  font-family: "Ubuntu Condensed", sans-serif;\n}\n\n.content {\n  display: grid;\n  grid-template-columns: 1fr 3fr;\n  height: 98vh;\n  position: relative;\n}\n\n.projects {\n  background-color: var(--dark-header);\n  color: white;\n}\n\n.projects-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--dark-header), var(--light-header));\n  min-height: 7vh;\n  border-right: 2px solid var(--light-header);\n}\n\n.projects-heading {\n  flex: 1;\n  padding: 5px;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  align-self: center;\n  text-shadow: 2px 2px 1px var(--dark-header);\n}\n\n.add-project {\n  align-self: center;\n  margin-right: 6px;\n  width: 25px;\n  height: 25px;\n}\n\n.add-project:hover {\n  width: 30px;\n  height: 30px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.projects-main {\n  font-size: 1.5rem;\n}\n\n.project {\n  padding: 10px 5px 10px 5px;\n}\n\n.project:hover {\n  cursor: pointer;\n  background-color: var(--light-header);\n}\n\n.main {\n  background-color: var(--background);\n  display: flex;\n  flex-direction: column;\n}\n\n.main-head {\n  display: flex;\n  flex-direction: row;\n  background: linear-gradient(90deg, var(--light-header), var(--dark-header));\n  align-items: center;\n  min-height: 7vh;\n  margin-bottom: 5px;\n}\n\n.main-heading {\n  flex: 1;\n  text-align: center;\n  color: white;\n  font-size: 2rem;\n  padding: 5px;\n  text-shadow: 2px 2px 1px var(--dark-header);\n}\n\n.edit-project,\n.del-project,\n.add-task {\n  margin: 2px;\n  width: 20px;\n  height: 20px;\n  color: white;\n}\n\n.edit-project:hover,\n.del-project:hover,\n.add-task:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n  cursor: pointer;\n}\n\n.add-task {\n  margin-right: 15px;\n}\n\n.tasks {\n  display: grid;\n  grid-template-rows: repeat(auto-fill, minmax(35px, 1fr));\n}\n\n.task {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  font-size: 1.2rem;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n}\n\n.task:hover {\n  cursor: pointer;\n  background-color: var(--highlight);\n  transition: 0.5s ease;\n}\n\n.due-date {\n  display: none;\n}\n\ninput[type="checkbox"],\n.edit-task,\n.del-task,\n.priority-image {\n  margin: 5px;\n  height: 20px;\n  width: 20px;\n}\n\n.edit-task:hover,\n.del-task:hover,\n.priority-image:hover {\n  width: 25px;\n  height: 25px;\n  transition: 0.5s ease;\n}\n\ninput[type="checkbox"]:checked {\n  accent-color: var(--dark-header);\n}\n\ninput[type="checkbox"]:checked + p.task-text {\n  text-decoration: line-through;\n}\n\ninput[type="checkbox"]:hover {\n  cursor: pointer;\n  height: 25px;\n  width: 25px;\n}\n\n.task-icons-div {\n  background-color: var(--background);\n  padding-left: 5px;\n  padding-right: 5px;\n  border-radius: 10px;\n}\n\n.task-icons-div:hover {\n  background-color: var(--highlight);\n  transition: 0.5s ease;\n}\n\n.task-text {\n  flex: 1;\n  padding-left: 10px;\n}\n\n.desc-text {\n  font-size: 1.1em;\n  font-style: italic;\n  margin-left: 10px;\n  margin-right: 10px;\n  margin-top: 10px;\n  min-height: 35px;\n  display: none;\n  transition: 1s ease;\n}\n\n.new-project,\n.change-project {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  width: 90%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-header), var(--light-header));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  transform: translate(-50%, -50%);\n}\n\n.error {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n  width: 50%;\n  padding: 20px;\n  background: linear-gradient(90deg, var(--dark-header), var(--light-header));\n  color: white;\n  display: none;\n  grid-template-rows: repeat(2, 1fr);\n  border-radius: 10px;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n  justify-content: center;\n}\n\n.project-input-div,\n.change-project-input-div {\n  display: flex;\n  flex-direction: column;\n  font-size: 1.2rem;\n  justify-content: space-around;\n  align-items: center;\n}\n\ninput#project-name,\ninput#new-project-name {\n  height: 1.6rem;\n  margin-top: 10px;\n  font-size: 1.2rem;\n}\n\n.project-btns-div,\n.change-project-btns-div {\n  display: flex;\n  flex-direction: row;\n  padding: 5px;\n  justify-content: center;\n  padding-top: 15px;\n}\n\n.new-task {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-header), var(--light-header));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.edit-task-modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  background: linear-gradient(90deg, var(--dark-header), var(--light-header));\n  width: 90%;\n  height: 70%;\n  display: none;\n  flex-direction: column;\n  justify-content: space-evenly;\n  align-items: center;\n  border-radius: 10px;\n  color: white;\n  font-size: 1.2rem;\n  border: 2px solid white;\n  box-shadow: 3px 3px 5px 2px var(--shadow);\n}\n\n.form-div {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n\ninput#name,\ninput#date,\nselect#priority,\ninput#new-name,\ninput#new-date,\nselect#new-priority {\n  height: 1.8rem;\n  font-size: 1.2rem;\n}\n\ntextarea#desc,\ntextarea#new-desc {\n  font-size: 1.2rem;\n}\n\n.form-label {\n  padding: 5px;\n  margin-right: 10px;\n}\n\n.create-project,\n.change-project-btn,\n.create-task,\n.update-task,\n.ok {\n  background-color: var(--background);\n  font-weight: bold;\n}\n\n.create-project:hover,\n.change-project-btn:hover,\n.create-task:hover,\n.update-task:hover,\n.ok:hover,\n.cancel-project:hover,\n.cancel-task:hover,\n.cancel-update-task:hover,\n.change-cancel-project:hover {\n  background-color: var(--lightest-header);\n  transition: 1s ease;\n  cursor: pointer;\n}\n\n.cancel-project,\n.cancel-task,\n.cancel-update-task,\n.change-cancel-project {\n  background-color: rgb(245, 55, 22);\n  font-weight: bold;\n}\n\n.create-task,\n.cancel-task,\n.update-task,\n.cancel-update-task,\n.create-project,\n.cancel-project,\n.change-project-btn,\n.change-cancel-project,\n.ok {\n  padding: 3px 6px 3px 6px;\n  margin-left: 6px;\n  margin-right: 6px;\n  border-radius: 9px;\n  font-size: 1.2rem;\n  box-shadow: 2px 2px 4px black;\n}\n\n.create-task,\n.cancel-task {\n  padding: 8px 10px 8px 10px;\n}\n\n.create-task {\n  margin-right: 15px;\n}\n\n.form-btns.div {\n  padding: 5px;\n}\n\n@media only screen and (max-width: 396px) {\n  .priority-image,\n  .edit-task,\n  .del-task {\n    padding: 0;\n    margin: 0;\n  }\n}\n\n@media only screen and (min-width: 550px) {\n  .new-project,\n  .edit-task-modal,\n  .change-project,\n  .new-task,\n  .error {\n    width: 500px;\n  }\n\n  .due-date {\n    padding-left: 5px;\n    padding-right: 5px;\n    font-size: 1rem;\n    display: block;\n  }\n\n  .task:hover + .desc-text {\n    display: block;\n  }\n}\n\n@media only screen and (min-width: 980px) {\n  .projects-main {\n    padding-left: 10px;\n  }\n\n  .add-project,\n  .edit-project,\n  .del-project,\n  .add-task,\n  .edit-task,\n  .del-task,\n  .priority-image {\n    height: 25px;\n    width: 25px;\n  }\n\n  .projects-heading,\n  .main-heading {\n    font-size: 3rem;\n    padding: 10px;\n  }\n\n  .project {\n    font-size: 2rem;\n  }\n\n  .task-text {\n    font-size: 1.5rem;\n  }\n\n  .due-date {\n    font-size: 1.5rem;\n  }\n\n  .project-input-div {\n    font-size: 1.5rem;\n  }\n\n  .new-task {\n    font-size: 1.5rem;\n  }\n}\n',
           "",
         ]);
-        const c = i;
+        const d = i;
       },
       645: (e) => {
         e.exports = function (e) {
@@ -42,9 +42,9 @@
               "string" == typeof e && (e = [[null, e, void 0]]);
               var i = {};
               if (r)
-                for (var c = 0; c < this.length; c++) {
-                  var d = this[c][0];
-                  null != d && (i[d] = !0);
+                for (var d = 0; d < this.length; d++) {
+                  var c = this[d][0];
+                  null != c && (i[c] = !0);
                 }
               for (var s = 0; s < e.length; s++) {
                 var u = [].concat(e[s]);
@@ -92,25 +92,25 @@
           return n;
         }
         function r(e, r) {
-          for (var o = {}, i = [], c = 0; c < e.length; c++) {
-            var d = e[c],
-              s = r.base ? d[0] + r.base : d[0],
+          for (var o = {}, i = [], d = 0; d < e.length; d++) {
+            var c = e[d],
+              s = r.base ? c[0] + r.base : c[0],
               u = o[s] || 0,
               l = "".concat(s, " ").concat(u);
             o[s] = u + 1;
             var h = n(l),
               m = {
-                css: d[1],
-                media: d[2],
-                sourceMap: d[3],
-                supports: d[4],
-                layer: d[5],
+                css: c[1],
+                media: c[2],
+                sourceMap: c[3],
+                supports: c[4],
+                layer: c[5],
               };
             if (-1 !== h) t[h].references++, t[h].updater(m);
             else {
               var f = a(m, r);
-              (r.byIndex = c),
-                t.splice(c, 0, { identifier: l, updater: f, references: 1 });
+              (r.byIndex = d),
+                t.splice(d, 0, { identifier: l, updater: f, references: 1 });
             }
             i.push(l);
           }
@@ -140,14 +140,14 @@
           return function (e) {
             e = e || [];
             for (var i = 0; i < o.length; i++) {
-              var c = n(o[i]);
-              t[c].references--;
+              var d = n(o[i]);
+              t[d].references--;
             }
-            for (var d = r(e, a), s = 0; s < o.length; s++) {
+            for (var c = r(e, a), s = 0; s < o.length; s++) {
               var u = n(o[s]);
               0 === t[u].references && (t[u].updater(), t.splice(u, 1));
             }
-            o = d;
+            o = c;
           };
         };
       },
@@ -291,9 +291,9 @@
       a = n(795),
       o = n.n(a),
       i = n(569),
-      c = n.n(i),
-      d = n(565),
-      s = n.n(d),
+      d = n.n(i),
+      c = n(565),
+      s = n.n(c),
       u = n(216),
       l = n.n(u),
       h = n(589),
@@ -369,7 +369,7 @@
     }
     (p.styleTagTransform = m()),
       (p.setAttributes = s()),
-      (p.insert = c().bind(null, "head")),
+      (p.insert = d().bind(null, "head")),
       (p.domAPI = o()),
       (p.insertStyleElement = l()),
       t()(f.Z, p),
@@ -404,7 +404,7 @@
       return C;
     }
     function M(e, t) {
-      var n, r, a, o, i, c, d, s;
+      var n, r, a, o, i, d, c, s;
       g(1, arguments);
       var u = j(),
         l = b(
@@ -420,16 +420,16 @@
                         : null == t ||
                           null === (i = t.locale) ||
                           void 0 === i ||
-                          null === (c = i.options) ||
-                          void 0 === c
+                          null === (d = i.options) ||
+                          void 0 === d
                         ? void 0
-                        : c.weekStartsOn) && void 0 !== a
+                        : d.weekStartsOn) && void 0 !== a
                     ? a
                     : u.weekStartsOn) && void 0 !== r
                 ? r
-                : null === (d = u.locale) ||
-                  void 0 === d ||
-                  null === (s = d.options) ||
+                : null === (c = u.locale) ||
+                  void 0 === c ||
+                  null === (s = c.options) ||
                   void 0 === s
                 ? void 0
                 : s.weekStartsOn) && void 0 !== n
@@ -446,7 +446,7 @@
       return h.setUTCDate(h.getUTCDate() - f), h.setUTCHours(0, 0, 0, 0), h;
     }
     function E(e, t) {
-      var n, r, a, o, i, c, d, s;
+      var n, r, a, o, i, d, c, s;
       g(1, arguments);
       var u = y(e),
         l = u.getUTCFullYear(),
@@ -465,16 +465,16 @@
                         : null == t ||
                           null === (i = t.locale) ||
                           void 0 === i ||
-                          null === (c = i.options) ||
-                          void 0 === c
+                          null === (d = i.options) ||
+                          void 0 === d
                         ? void 0
-                        : c.firstWeekContainsDate) && void 0 !== a
+                        : d.firstWeekContainsDate) && void 0 !== a
                     ? a
                     : h.firstWeekContainsDate) && void 0 !== r
                 ? r
-                : null === (d = h.locale) ||
-                  void 0 === d ||
-                  null === (s = d.options) ||
+                : null === (c = h.locale) ||
+                  void 0 === c ||
+                  null === (s = c.options) ||
                   void 0 === s
                 ? void 0
                 : s.firstWeekContainsDate) && void 0 !== n
@@ -649,7 +649,7 @@
             r =
               M(n, t).getTime() -
               (function (e, t) {
-                var n, r, a, o, i, c, d, s;
+                var n, r, a, o, i, d, c, s;
                 g(1, arguments);
                 var u = j(),
                   l = b(
@@ -668,16 +668,16 @@
                                   : null == t ||
                                     null === (i = t.locale) ||
                                     void 0 === i ||
-                                    null === (c = i.options) ||
-                                    void 0 === c
+                                    null === (d = i.options) ||
+                                    void 0 === d
                                   ? void 0
-                                  : c.firstWeekContainsDate) && void 0 !== a
+                                  : d.firstWeekContainsDate) && void 0 !== a
                               ? a
                               : u.firstWeekContainsDate) && void 0 !== r
                           ? r
-                          : null === (d = u.locale) ||
-                            void 0 === d ||
-                            null === (s = d.options) ||
+                          : null === (c = u.locale) ||
+                            void 0 === c ||
+                            null === (s = c.options) ||
                             void 0 === s
                           ? void 0
                           : s.firstWeekContainsDate) && void 0 !== n
@@ -1169,8 +1169,8 @@
           r = e.formattingValues[o] || e.formattingValues[a];
         } else {
           var i = e.defaultWidth,
-            c = null != n && n.width ? String(n.width) : e.defaultWidth;
-          r = e.values[c] || e.values[i];
+            d = null != n && n.width ? String(n.width) : e.defaultWidth;
+          r = e.values[d] || e.values[i];
         }
         return r[e.argumentCallback ? e.argumentCallback(t) : t];
       };
@@ -1338,21 +1338,21 @@
           o = t.match(a);
         if (!o) return null;
         var i,
-          c = o[0],
-          d = (r && e.parsePatterns[r]) || e.parsePatterns[e.defaultParseWidth],
-          s = Array.isArray(d)
+          d = o[0],
+          c = (r && e.parsePatterns[r]) || e.parsePatterns[e.defaultParseWidth],
+          s = Array.isArray(c)
             ? (function (e, t) {
-                for (var n = 0; n < e.length; n++) if (e[n].test(c)) return n;
-              })(d)
+                for (var n = 0; n < e.length; n++) if (e[n].test(d)) return n;
+              })(c)
             : (function (e, t) {
                 for (var n in e)
-                  if (e.hasOwnProperty(n) && e[n].test(c)) return n;
-              })(d);
+                  if (e.hasOwnProperty(n) && e[n].test(d)) return n;
+              })(c);
         return (
           (i = e.valueCallback ? e.valueCallback(s) : s),
           {
             value: (i = n.valueCallback ? n.valueCallback(i) : i),
-            rest: t.slice(c.length),
+            rest: t.slice(d.length),
           }
         );
       };
@@ -1510,12 +1510,12 @@
       options: { weekStartsOn: 0, firstWeekContainsDate: 1 },
     };
     var ie = /[yYQqMLwIdDecihHKkms]o|(\w)\1*|''|'(''|[^'])+('|$)|./g,
-      ce = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
-      de = /^'([^]*?)'?$/,
+      de = /P+p+|P+|p+|''|'(''|[^'])+('|$)|./g,
+      ce = /^'([^]*?)'?$/,
       se = /''/g,
       ue = /[a-zA-Z]/;
     function le(e, t, n) {
-      var r, a, o, i, c, d, s, u, l, h, m, f, p, w, x, k, T, S;
+      var r, a, o, i, d, c, s, u, l, h, m, f, p, w, x, k, T, S;
       g(2, arguments);
       var C = String(t),
         M = j(),
@@ -1533,19 +1533,19 @@
               null !==
                 (i =
                   null !==
-                    (c =
+                    (d =
                       null !==
-                        (d = null == n ? void 0 : n.firstWeekContainsDate) &&
-                      void 0 !== d
-                        ? d
+                        (c = null == n ? void 0 : n.firstWeekContainsDate) &&
+                      void 0 !== c
+                        ? c
                         : null == n ||
                           null === (s = n.locale) ||
                           void 0 === s ||
                           null === (u = s.options) ||
                           void 0 === u
                         ? void 0
-                        : u.firstWeekContainsDate) && void 0 !== c
-                    ? c
+                        : u.firstWeekContainsDate) && void 0 !== d
+                    ? d
                     : M.firstWeekContainsDate) && void 0 !== i
                 ? i
                 : null === (l = M.locale) ||
@@ -1649,7 +1649,7 @@
           locale: E,
           _originalDate: q,
         };
-      return C.match(ce)
+      return C.match(de)
         .map(function (e) {
           var t = e[0];
           return "p" === t || "P" === t ? (0, R[t])(e, E.formatLong) : e;
@@ -1662,20 +1662,20 @@
             o,
             i = r[0];
           if ("'" === i)
-            return (o = (a = r).match(de)) ? o[1].replace(se, "'") : a;
-          var c,
-            d = I[i];
-          if (d)
+            return (o = (a = r).match(ce)) ? o[1].replace(se, "'") : a;
+          var d,
+            c = I[i];
+          if (c)
             return (
               (null != n && n.useAdditionalWeekYearTokens) ||
-                ((c = r), -1 === J.indexOf(c)) ||
+                ((d = r), -1 === J.indexOf(d)) ||
                 _(r, t, String(e)),
               (null != n && n.useAdditionalDayOfYearTokens) ||
                 !(function (e) {
                   return -1 !== X.indexOf(e);
                 })(r) ||
                 _(r, t, String(e)),
-              d(N, r, E.localize, L)
+              c(N, r, E.localize, L)
             );
           if (i.match(ue))
             throw new RangeError(
@@ -1771,17 +1771,17 @@
               ? (i.src = me)
               : (i.src = fe),
             o.appendChild(i);
-          const c = document.createElement("img");
-          c.classList.add("edit-task"),
-            (c.alt = "Edit task"),
-            (c.src = pe),
-            o.appendChild(c);
           const d = document.createElement("img");
+          d.classList.add("edit-task"),
+            (d.alt = "Edit task"),
+            (d.src = pe),
+            o.appendChild(d);
+          const c = document.createElement("img");
           if (
-            (d.classList.add("del-task"),
-            (d.alt = "Delete task"),
-            (d.src = ge),
-            o.appendChild(d),
+            (c.classList.add("del-task"),
+            (c.alt = "Delete task"),
+            (c.src = ge),
+            o.appendChild(c),
             ye.appendChild(n),
             e.desc)
           ) {
@@ -1940,14 +1940,14 @@
           a = document.querySelector("#name"),
           o = document.querySelector("#desc"),
           i = document.querySelector("#date"),
-          c = document.querySelector("#priority");
-        function d() {
+          d = document.querySelector("#priority");
+        function c() {
           (e.style.display = "none"),
             (t.style.display = "block"),
             (a.value = ""),
             (o.value = ""),
             (i.value = ""),
-            (c.value = "");
+            (d.value = "");
         }
         return {
           newTaskModal: e,
@@ -1957,11 +1957,11 @@
           show: function () {
             (e.style.display = "flex"), (t.style.display = "none");
           },
-          hide: d,
+          hide: c,
           submit: function () {
             "" == a.value || "" == i.value
               ? Ne.show()
-              : (Ce(a.value, o.value, i.value, c.value), d(), Te(), Ee());
+              : (Ce(a.value, o.value, i.value, d.value), c(), Te(), Ee());
           },
         };
       })(),
